@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #1a1a1a;
+}
+
+.container article img {
+    position: relative;
+    height: 100%;
+    
+}
+.main {
+    overflow: hidden;
+}
+main {
+    position: relative;
+}
+
+main .container .main .banner-login .first-banner {
+    height: 80%;
+    width: 100%;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 34%, rgba(255, 255, 255, 0) 100%);
+}
+
+main .container .banner-login {
+    position: relative;
+}
+
+.banner-login .first-banner {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+.container .logo {
+    position: absolute;
+    top: 0;
+    width: 90%;
+    margin: 0 auto;
+    z-index: 2;
+}
+.container .logo img {
+    width: 100%;
+}
+
+.banner1 {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .container .logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 25%;
+        z-index: 2;
+    }
+    body {
+        background-image: url("/IMAGE/TrangChu/nen-web.png");
+        background-size: cover;
+    }
+    main .container .main .banner-login .first-banner {
+        height: 33%;
+        width: 100%;
+        background: rgb(0, 0, 0);
+        background: linear-gradient(180deg, rgba(0, 0, 0, 1) 34%, rgba(255, 255, 255, 0) 100%);
+    }
+    
+}
