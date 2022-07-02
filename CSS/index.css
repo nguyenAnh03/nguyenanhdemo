@@ -148,7 +148,7 @@ main .container .banner-login {
         grid-template-columns: 80% 20%;
         position: absolute;
         top: 0;
-        width: 100vw;
+        width: 100%;
         text-align: left;
     }
 
