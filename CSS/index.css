@@ -39,21 +39,71 @@ main .container .banner-login {
 }
 
 .container .logo {
-    position: absolute;
-    top: 0;
     width: 100%;
     margin: 0 auto;
     z-index: 2;
 }
 
 .container .logo img {
-    width: 80%;
-    margin: 0 auto !important;
+    width: 70%;
+    margin: 0 !important;
 }
 
-.banner1 {
-    display: none;
+.container .logo .button {
+    width: 100%;
+    text-align: center;
 }
+.container .logo button {
+    margin-top: 20px;
+    padding: 8px 35px;
+    font-size: 17px;
+    color: #fff;
+    background-color: rgb(249, 68, 68);
+    border-radius: 10px;
+    border: none;
+    width: 130px;
+
+}
+
+.container .information {
+    position: absolute;
+    top: 30%;
+    color: #fff;
+    z-index: 3;
+    width: 100%;
+    text-align: center;
+    font-weight: bolder;
+    font-family: monospace;
+    font-size: 40px;
+}
+
+.container .login {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+
+.container .login img {
+    margin: 0 auto;
+    width: 220px;
+    border-radius: 10px;
+}
+
+.container .login:hover>img {
+    cursor: pointer;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    display: grid;
+    grid-template-columns: 100%;
+    width: 100vw;
+    text-align: center;
+}
+
+
+
 
 /* Đổi màu thanh cuộn trình duyệt */
 ::-webkit-scrollbar {
@@ -69,11 +119,11 @@ main .container .banner-login {
 
 @media (min-width: 992px) {
     .container .logo {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 25%;
+        width: 100%;
         z-index: 2;
+    }
+    .container .logo img {
+        width: 25%;
     }
 
     body {
@@ -86,6 +136,20 @@ main .container .banner-login {
         width: 100%;
         background: rgb(0, 0, 0);
         background: linear-gradient(180deg, rgba(0, 0, 0, 1) 34%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    main .container .main .banner-login img {
+        display: flex;
+        top: 0px;
+    }
+
+    .header {
+        display: grid;
+        grid-template-columns: 80% 20%;
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        text-align: left;
     }
 
 }
