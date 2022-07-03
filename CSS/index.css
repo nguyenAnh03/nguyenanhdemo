@@ -7,7 +7,8 @@ body {
 }
 @font-face {
     font-family: chutieude;
-    src: url("../FONT/UTM\ Avenida.ttf") format('truetype');
+    src: url("../FONT/UTM\ Avenida.ttf") format('truetype'),
+    url("../FONT/UTM\ AvenidaIE.eot") format('embedded-opentype');
     /* Đường dẫn font                  Đuôi - kiểu của font chữ */
 
 }
