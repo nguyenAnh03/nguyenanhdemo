@@ -15,7 +15,8 @@ body {
 @font-face {
     font-family: fontnav;
     src: url("/FONT/UTM\ Alberta\ Heavy.ttf") format('truetype'),
-        url("/FONT/UTM\ Alberta\ HeavyIE.eot") format('embedded-opentype');
+        url("/FONT/UTM\ Alberta\ HeavyIE.eot") format('embedded-opentype')
+        url("/FONT/UTM-Alberta-Heavy.woff") format('woff');
 }
 
 header {
@@ -69,6 +70,7 @@ header>.header>img {
     display: none;
     width: 100vw;
     background-color: #000;
+    margin-bottom: 10px;
 }
 
 /* không hiển thị thanh input tìm kiếm */
