@@ -149,6 +149,7 @@ ul .bodder-menucon:hover>#menucon {
 }
 .item-phimcapnhat img {
     width: 100%;
+    height: 99%;
     border-radius: 5px;
 }
 .poster-phim {
@@ -158,7 +159,7 @@ ul .bodder-menucon:hover>#menucon {
 .button {
     position: absolute;
     bottom: -50px;
-    border-radius: 0px 0px 8px 8px;
+    border-radius: 0px 0px 5px 5px;
     background-color: rgba(0, 0, 0, 0.795);
     height: 50px;
     width: 100%;
@@ -170,7 +171,7 @@ ul .bodder-menucon:hover>#menucon {
 .poster-phim:hover>.button {
     z-index: 1;
     opacity: 1;
-    transform: translateY(-55px);
+    transform: translateY(-53px);
     transition: all 0.5s ease;
 }
 .button button {
@@ -196,6 +197,13 @@ ul .bodder-menucon:hover>#menucon {
     width: 100%;
     background-color: #000;
     border-radius: 10px;
+    color: rgb(186, 183, 183);
+    font-family: sans-serif;
+    padding: 10px;
+}
+.review-phim div {
+    margin-bottom: 5px;
+    font-size: 10px;
 }
 
 /* Đổi màu thanh cuộn trình duyệt */
@@ -210,7 +218,18 @@ ul .bodder-menucon:hover>#menucon {
     border-radius: 10px;
 }
 
-
+@media (min-width: 500px) {
+    .title-phim {
+        font-size: 18px;
+    }
+    .review-phim {
+        padding: 15px;
+    }
+    .review-phim div {
+        margin-bottom: 18px;
+        font-size: 15px;
+    }
+}
 
 @media (min-width: 576px){
     /* reposive cho header và menu*/
@@ -223,6 +242,10 @@ ul .bodder-menucon:hover>#menucon {
      .nav-ul li{
         font-size: 15px;
         padding: 20px;
+    }
+    /* reposive cho phim mới cập nhật*/
+    .title-phim {
+        font-size: 20px;
     }
 }
 
@@ -240,6 +263,13 @@ ul .bodder-menucon:hover>#menucon {
      .nav-ul li{
         font-size: 15px;
         padding: 20px;
+    }
+    /* reposive cho phim mới cập nhật*/
+    .title-phim {
+        font-size: 25px;
+    }
+    .review-phim div {
+        margin-bottom: 25px;
     }
 }
 
@@ -362,6 +392,21 @@ ul .bodder-menucon:hover>#menucon {
         border: none;
         border-bottom: 2px solid silver;
     }
+
+    /* reposive cho phim mới cập nhật*/
+    .title-phim {
+        font-size: 18px;
+    }
+    .review-phim div {
+        margin-bottom: 18px;
+    }
+    .review-phim div a{
+        color: rgb(129, 129, 214);
+        text-decoration: none;
+    }
+    .review-phim div a:hover{
+        color: chartreuse;
+    }
     
 }
 
@@ -386,6 +431,11 @@ ul .bodder-menucon:hover>#menucon {
         font-size: 15px;
         padding: 10px;
         
+    }
+
+    /* reposive cho phim mới cập nhật*/
+    .title-phim {
+        font-size: 22px;
     }
     
 }
