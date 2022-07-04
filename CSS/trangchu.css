@@ -14,10 +14,10 @@ body {
 
 @font-face {
     font-family: fontnav;
-    src: url("/FONT/UTM\ Alberta\ Heavy.ttf") format('truetype'),
-        url("/FONT/UTM\ Alberta\ HeavyIE.eot") format('embedded-opentype'),
-        url("/FONT/UTM-Alberta-Heavy.woff") format('woff'),
-        url("/FONT/UTM-Alberta-Heavy.otf") format('otf');
+    src: url("/FONT/HeavyIE.ttf") format('truetype'),
+        url("/FONT/HeavyIEE.eot") format('embedded-opentype'),
+        url("/FONT/Heavy.woff") format('woff'),
+        url("/FONT/HeavyIEEE.otf") format('otf');
 }
 
 header {
@@ -122,21 +122,29 @@ ul #menucon li a {
     
 }
 .bodder-menucon {
+    z-index: 1;
     position: relative;
 }
 ul .bodder-menucon:hover>#menucon {
     display: block;
     background-color: #333;
     position: absolute;
-    top: 20px;
+    top: 22px;
     right: 0;
 }
 .bodder-menucon #menucon li:hover {
     border-bottom: 1px solid white;
 }
-.bodder-menucon #menucon li:hover a {
+.nav-primary .nav-ul li a:hover {
     color: rgba(252, 185, 0, 1);
 }
+.nav-primary .nav-ul li:hover {
+    color: rgba(252, 185, 0, 1);
+}
+
+
+
+/*các phim mới cập nhật*/
 .bodder-phimmoicapnhat {
     display: grid;
     grid-template-columns: 100%;
@@ -148,11 +156,63 @@ ul .bodder-menucon:hover>#menucon {
 .bodder-phimmoicapnhat .item-phimcapnhat {
     background-color: rgba(53, 52, 52, 0.73);
     width: 100%;
-    height: 100px;
+    height: auto;
+    border-radius: 10px;
+    padding: 5px;
+    display: grid;
+    grid-template-columns:  40% 59%;
+    gap: 1%;
+}
+.item-phimcapnhat img {
+    width: 100%;
+    border-radius: 5px;
+}
+.item-phimcapnhat .title-phim {
+    color: white;
+}
+.poster-phim {
+    position: relative;
+    overflow: hidden;
+}
+.button {
+    position: absolute;
+    bottom: -50px;
+    border-radius: 0px 0px 8px 8px;
+    background-color: rgba(0, 0, 0, 0.795);
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    line-height: 50px;
+    z-index: -1;
+    opacity: 0;
+}
+.poster-phim:hover>.button {
+    z-index: 1;
+    opacity: 1;
+    transform: translateY(-55px);
+    transition: all 0.5s ease;
+}
+.button button {
+    background-color: rgba(58, 176, 255, 1);
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+.review-phim {
+    margin-top: 2%;
+    height: 93%;
+    width: 100%;
+    background-color: #000;
+    border-radius: 10px;
 }
 
 
+
+
 @media (min-width: 576px){
+    /* reposive cho header và menu*/
     header>.header>img {
         width: 40%;
     }
@@ -166,6 +226,7 @@ ul .bodder-menucon:hover>#menucon {
 }
 
 @media (min-width: 768px){
+    /* reposive cho header và menu*/
     header>.header>img {
         width: 40%;
     }
@@ -182,6 +243,7 @@ ul .bodder-menucon:hover>#menucon {
 }
 
 @media (min-width: 992px) {
+    /* reposive cho header và menu*/
     header {
         display: grid;
         grid-template-columns: 15% 30% 55%;
@@ -254,6 +316,7 @@ ul .bodder-menucon:hover>#menucon {
     
 
     .context-trangchu .banner-trangchu {
+        display: block;
         width: 90%;
         height: 220px;
         overflow: hidden;
@@ -281,7 +344,6 @@ ul .bodder-menucon:hover>#menucon {
     .bodder-phimmoicapnhat .item-phimcapnhat {
         background-color: rgba(53, 52, 52, 0.73);
         width: 100%;
-        height: 100px;
     }
     
     
@@ -303,6 +365,7 @@ ul .bodder-menucon:hover>#menucon {
 }
 
 @media (min-width: 1200px) {
+    /* reposive cho header và menu*/
     .nav-ul li {
         font-size: 18px;
         padding: 10px;

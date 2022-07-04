@@ -15,7 +15,9 @@ body {
 @font-face {
     font-family: fontnav;
     src: url("/FONT/UTM\ Alberta\ Heavy.ttf") format('truetype'),
-        url("/FONT/UTM\ Alberta\ HeavyIE.eot") format('embedded-opentype');
+        url("/FONT/UTM\ Alberta\ HeavyIE.eot") format('embedded-opentype'),
+        url("/FONT/UTM-Alberta-Heavy.woff") format('woff'),
+        url("/FONT/UTM-Alberta-Heavy.otf") format('otf');
 }
 
 header {
@@ -49,27 +51,29 @@ header>.header>img {
     width: 60%;
 }
 
-.nav-ul {
-    list-style: none;
-    display: inline;
-    padding: 0;
-}
-
 .nav-ul li {
-    display: inline;
-    font-size: 20px;
+    display: block;
     text-transform: uppercase;
     font-family: fontnav;
-    margin: 30px;
+    color: white;
 }
 .nav-ul li a {
     text-decoration: none;
     color: white;
 }
 /* Không hiển thị thanh điều hướng */
-.nav-primary {
-    display: none;
+.nav-ul {
+    list-style: none;
+    padding: 0;
+    display: block;
 }
+.nav-primary{
+    display: none;
+    width: 100vw;
+    background-color: #000;
+    margin-bottom: 10px;
+}
+
 /* không hiển thị thanh input tìm kiếm */
 .head{
     display: none;
@@ -84,8 +88,54 @@ header #icon-menu, #icon-search {
 .context-trangchu .banner-trangchu {
     display: none;
 }
-#icon-menu:hover~.nav-primary {
+/* Hiện thị menu */
+.nav-primary .nav-ul {
+    width: 100%;
+    margin: 0 auto;
+}
+ .nav-ul li a{
+    font-size: 12px;
+}
+ .nav-ul li{
+    display: inline;
+    font-size: 12px;
+    padding: 10px 10px;
+}
+
+ul li>#menucon {
+    display: none;
+    padding: 5px 0 5px 0;
+    margin: 0;
+    border-radius: 5px;
+    width: 100px;
+}
+ul #menucon li {
+    border-bottom: 1px solid salmon;
     display: block;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+}
+ul #menucon li a {
+    font-size: 12px;
+    padding: 5px;
+    
+}
+.bodder-menucon {
+    position: relative;
+}
+ul .bodder-menucon:hover>#menucon {
+    display: block;
+    background-color: #333;
+    position: absolute;
+    top: 22px;
+    right: 0;
+}
+.bodder-menucon #menucon li:hover {
+    border-bottom: 1px solid white;
+}
+.bodder-menucon #menucon li:hover a {
+    color: rgba(252, 185, 0, 1);
 }
 .bodder-phimmoicapnhat {
     display: grid;
@@ -106,6 +156,13 @@ header #icon-menu, #icon-search {
     header>.header>img {
         width: 40%;
     }
+    .nav-ul li a{
+        font-size: 15px;
+    }
+     .nav-ul li{
+        font-size: 15px;
+        padding: 20px;
+    }
 }
 
 @media (min-width: 768px){
@@ -114,6 +171,13 @@ header #icon-menu, #icon-search {
     }
     header #icon-menu, #icon-search {
         font-size: 25px;
+    }
+    .nav-ul li a{
+        font-size: 15px;
+    }
+     .nav-ul li{
+        font-size: 15px;
+        padding: 20px;
     }
 }
 
@@ -131,7 +195,13 @@ header #icon-menu, #icon-search {
     .container header #icon-menu, #icon-search{
         display: none;
     }
+    .nav-primary {
+        width: 100%;
+    }
     .nav-primary ul {
+        display: inline;
+    }
+    .nav-ul:hover li{
         display: inline;
     }
     header #input {
@@ -158,6 +228,7 @@ header #icon-menu, #icon-search {
         list-style: none;
         display: inline;
         padding: 0;
+        width: 100%;
     }
     
     .nav-primary {
@@ -171,47 +242,16 @@ header #icon-menu, #icon-search {
         font-family: fontnav;
         color: white;
         font-size: 15px;
+        display: inline;
+        margin: 20px;
+        padding: 0;
     }
     .nav-ul li a {
         text-decoration: none;
         color: white;
         font-size: 15px;
     }
-    ul li>#menucon {
-        display: none;
-        padding: 5px 0 5px 0;
-        margin: 0;
-        border-radius: 5px;
-        width: 100px;
-    }
-    ul #menucon li {
-        border-bottom: 1px solid salmon;
-        display: block;
-        width: 100%;
-        margin: 0;
-        padding: 10px;
-    }
-    ul #menucon li a {
-        font-size: 12px;
-        padding: 5px;
-        
-    }
-    .bodder-menucon {
-        position: relative;
-    }
-    ul .bodder-menucon:hover>#menucon {
-        display: block;
-        background-color: #333;
-        position: absolute;
-        top: 20px;
-        right: 0;
-    }
-    .bodder-menucon #menucon li:hover {
-        border-bottom: 1px solid white;
-    }
-    .bodder-menucon #menucon li:hover a {
-        color: rgba(252, 185, 0, 1);
-    }
+    
 
     .context-trangchu .banner-trangchu {
         width: 90%;
@@ -263,11 +303,12 @@ header #icon-menu, #icon-search {
 }
 
 @media (min-width: 1200px) {
-    .nav-primary li {
-        font-size: 20px;
+    .nav-ul li {
+        font-size: 18px;
+        padding: 10px;
     }
     .nav-ul li a {
-        font-size: 20px;
+        font-size: 18px;
     }
     ul li>#menucon {
         display: none;

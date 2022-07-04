@@ -7,7 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cinema - Thể loại</title>
     <link rel="stylesheet" href="CSS/theloai.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="IMAGE/TrangChu/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="  crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 </head>
 
 <body>
@@ -23,8 +26,15 @@
             <i class="fas fa-bars header" id="icon-menu" style="color: white;"></i>
             <nav class="nav-primary header">
                 <ul class="nav-ul">
-                    <li> <a href="">Trang chủ</a></li>
-                    <li><a href="">Thể loại</a></li>
+                    <li> <a href="trangchu.html">Trang chủ</a></li>
+                    <li class="bodder-menucon">Thể loại
+                        <ul id="menucon">
+                            <li><a href="">Chiếu rạp</a></li>
+                            <li><a href="">Kinh dị</a></li>
+                            <li><a href="">Tình cảm</a></li>
+                            <li><a href="">Tâm lí</a></li>
+                        </ul>
+                    </li>
                     <li><a href="">Giới thiệu</a></li>
                     <li><a href="">Mua vé</a></li>
                 </ul>
@@ -43,9 +53,16 @@
 
                 </section>
             </div>
-            
+
         </article>
     </div>
 </body>
 
 </html>
+<script>
+    $(document).ready(function() { /* sau khi html load và sẵn sàng*/
+        $('#icon-menu').click(function(){ /*thực hiện hàm click*/
+            $('nav').slideToggle(); /*xổ nav xuống khi bấm #icon-menu*/
+        });
+    })
+</script>
