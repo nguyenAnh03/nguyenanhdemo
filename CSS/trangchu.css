@@ -14,10 +14,10 @@ body {
 
 @font-face {
     font-family: fontnav;
-    src: url("/FONT/HeavyIE.ttf") format('truetype'),
-        url("/FONT/HeavyIEE.eot") format('embedded-opentype'),
-        url("/FONT/Heavy.woff") format('woff'),
-        url("/FONT/HeavyIEEE.otf") format('otf');
+    src: url('../FONT/HeavyIE.ttf') format('truetype'),
+         url('../FONT/HeavyIEE.eot') format('embedded-opentype'),
+         url('../FONT/Heavy.woff') format('woff'),
+         url('../FONT/HeavyIEEE.otf') format('otf');
 }
 
 header {
