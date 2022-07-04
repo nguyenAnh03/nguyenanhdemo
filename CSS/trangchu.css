@@ -15,8 +15,9 @@ body {
 @font-face {
     font-family: fontnav;
     src: url("/FONT/UTM\ Alberta\ Heavy.ttf") format('truetype'),
-        url("/FONT/UTM\ Alberta\ HeavyIE.eot") format('embedded-opentype')
-        url("/FONT/UTM-Alberta-Heavy.woff") format('woff');
+        url("/FONT/UTM\ Alberta\ HeavyIE.eot") format('embedded-opentype'),
+        url("/FONT/UTM-Alberta-Heavy.woff") format('woff'),
+        url("/FONT/UTM-Alberta-Heavy.otf") format('otf');
 }
 
 header {
