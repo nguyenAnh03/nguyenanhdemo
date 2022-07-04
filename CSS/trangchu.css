@@ -28,10 +28,10 @@ header {
     text-align: center;
 }
 
-/* header #input {
+header #input {
     display: inline;
     background-color: rgba(58, 58, 58, 1);
-    background-image: url(/IMAGE/TrangChu/logo-tim-kiem.png);
+    background-image: url("../IMAGE/TrangChu/logo-tim-kiem.png");
     background-size: contain;
     background-position: right;
     background-repeat: no-repeat;
@@ -42,7 +42,7 @@ header {
     padding: 12px;
     padding-left: 15px;
     color: rgb(248, 245, 245);
-} */
+}
 /* Logo hiển thị 90% so với gird layout */
 header>.logo {
     text-align: left;
