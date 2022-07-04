@@ -1,0 +1,233 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    background-image: url("../IMAGE/TrangChu/nen-web.png");
+    background-blend-mode: hard-light;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+@font-face {
+    font-family: fontnav;
+    src: url("/FONT/UTM\ Alberta\ Heavy.ttf") format('truetype'),
+        url("/FONT/UTM\ Alberta\ HeavyIE.eot") format('embedded-opentype');
+}
+
+header {
+    display: grid;
+    grid-template-columns: 70% 10% 20%;
+    background-color: black;
+    border-bottom: 4px solid rgba(252, 185, 0, 1);
+    text-align: center;
+}
+
+/* header #input {
+    display: inline;
+    background-color: rgba(58, 58, 58, 1);
+    background-image: url(/IMAGE/TrangChu/logo-tim-kiem.png);
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+    border: none;
+    outline: none;
+    width: 70%;
+    border-radius: 20px;
+    padding: 12px;
+    padding-left: 15px;
+    color: rgb(248, 245, 245);
+} */
+/* Logo hiển thị 90% so với gird layout */
+header>.logo {
+    text-align: left;
+}
+header>.header>img {
+    width: 90%;
+}
+
+.nav-ul {
+    list-style: none;
+    display: inline;
+    padding: 0;
+}
+
+.nav-ul li {
+    display: inline;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-family: fontnav;
+    margin: 30px;
+}
+.nav-ul li a {
+    text-decoration: none;
+    color: white;
+}
+/* Không hiển thị thanh điều hướng */
+.nav-primary {
+    display: none;
+}
+/* không hiển thị thanh input tìm kiếm */
+.head{
+    display: none;
+}
+/* Hiển thị icon menu và icon tìm kiếm */
+header #icon-menu, #icon-search {
+    margin: auto 0;
+    font-size: 20px;
+    cursor: pointer;
+}
+/* Không hiển thị banner quảng cáo */
+.context-trangchu .banner-trangchu {
+    display: none;
+}
+
+.bodder-phimmoicapnhat {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-gap: 5%;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.bodder-phimmoicapnhat .item-phimcapnhat {
+    background-color: rgba(53, 52, 52, 0.73);
+    width: 100%;
+    height: 100px;
+}
+
+
+@media (min-width: 576px){
+    header>.header>img {
+        width: 50%;
+    }
+}
+
+@media (min-width: 768px){
+    header>.header>img {
+        width: 50%;
+    }
+    header #icon-menu, #icon-search {
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 992px) {
+    header {
+        display: grid;
+        grid-template-columns: 15% 30% 55%;
+        background-color: black;
+        border-bottom: 4px solid rgba(252, 185, 0, 1);
+        text-align: center;
+    }
+    header .header {
+        margin: auto 0;
+    }
+    .container header #icon-menu, #icon-search{
+        display: none;
+    }
+    .nav-primary ul {
+        display: inline;
+    }
+    header #input {
+        display: inline;
+        background-color: rgba(58, 58, 58, 1);
+        background-image: url(/IMAGE/TrangChu/logo-tim-kiem.png);
+        background-size: contain;
+        background-position: right;
+        background-repeat: no-repeat;
+        border: none;
+        outline: none;
+        width: 70%;
+        border-radius: 20px;
+        padding: 12px;
+        padding-left: 15px;
+        color: rgb(248, 245, 245);
+    }
+    
+    header>.header>img {
+        width: 100%;
+    }
+    
+    .nav-ul {
+        list-style: none;
+        display: inline;
+        padding: 0;
+    }
+    
+    .nav-primary {
+        text-align: right;
+        padding-right: 10px;
+        display: inline;
+    }
+    
+    .nav-ul li {
+        display: inline;
+        font-size: 15px;
+        text-transform: uppercase;
+        font-family: fontnav;
+    }
+    .nav-ul li a {
+        text-decoration: none;
+        color: white;
+    }
+    
+    
+    .context-trangchu .banner-trangchu {
+        width: 90%;
+        height: 220px;
+        overflow: hidden;
+        margin: 0 auto;
+        margin-top: 20px;
+        border: 5px solid saddlebrown;
+        border-radius: 5px;
+        position: relative;
+    }
+    
+    .banner-trangchu img {
+        width: 100vw;
+        position: absolute;
+        top: -30px;
+    }
+    
+    .bodder-phimmoicapnhat {
+        display: grid;
+        grid-template-columns: 49% 49%;
+        grid-gap: 2%;
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    .bodder-phimmoicapnhat .item-phimcapnhat {
+        background-color: rgba(53, 52, 52, 0.73);
+        width: 100%;
+        height: 100px;
+    }
+    
+    
+    .head {
+        display: inline;
+    }
+    header .head .input-form {
+        height: 40px;
+        width: 100%;
+        position: relative;
+    }
+    
+    .head .input-form input {
+        width: 100%;
+        border: none;
+        border-bottom: 2px solid silver;
+    }
+    
+}
+
+@media (min-width: 1200px) {
+    .nav-primary li a {
+        font-size: 20px;
+    }
+    
+}

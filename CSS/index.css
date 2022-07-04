@@ -89,7 +89,9 @@ main .container .banner-login {
     border-radius: 10px;
     border: none;
     width: 130px;
-
+}
+.container button:hover {
+    cursor: pointer;
 }
 
 .container .information {
