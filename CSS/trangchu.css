@@ -129,12 +129,22 @@ ul .bodder-menucon:hover>#menucon {
 
 
 /*các phim mới cập nhật*/
+.title-phimmoicapnhat {
+    color: rgba(252, 185, 0, 1);
+    font-family: fontnav;
+    width: 98%;
+    text-align: left;
+    font-size: 15px;
+    margin: 20px auto;
+    text-transform: uppercase;
+}
 .bodder-phimmoicapnhat {
     display: grid;
     grid-template-columns: 100%;
-    grid-gap: 5%;
-    width: 90%;
+    grid-gap: 20px;
+    width: 98%;
     margin: 0 auto;
+    margin-bottom: 30px;
 }
 
 .bodder-phimmoicapnhat .item-phimcapnhat {
@@ -184,6 +194,10 @@ ul .bodder-menucon:hover>#menucon {
     outline: none;
     border: none;
 }
+.button .button-xem {
+    background-color: red;
+    margin-right: 10px;
+}
 .title-phim {
     height: 10%;
     overflow: hidden;
@@ -195,7 +209,7 @@ ul .bodder-menucon:hover>#menucon {
     margin-top: 2%;
     height: 87%;
     width: 100%;
-    background-color: #000;
+    background-color: rgb(22, 22, 22);
     border-radius: 10px;
     color: rgb(186, 183, 183);
     font-family: sans-serif;
@@ -205,6 +219,81 @@ ul .bodder-menucon:hover>#menucon {
     margin-bottom: 5px;
     font-size: 10px;
 }
+.review-phim div a{
+    color: rgb(129, 129, 214);
+    text-decoration: none;
+}
+.review-phim div a:hover{
+    color: chartreuse;
+}
+
+/* Các phim đề cử */
+.phimdecu-trangchu {
+    width: 98%;
+    height: auto;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 20px;
+}
+.bodder-phimdecu {
+    clear: both;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    row-gap: 20px;
+}
+.phimdecu-trangchu #menu-right {
+    width: 100%;
+}
+.bodder-phimdecu .item-phimdecu img {
+    width: 100%;
+}
+.item-phimdecu {
+    width: 92%; 
+    height: fit-content;
+    background-color: rgba(51, 51, 51, 1);
+    padding: 2%;
+    padding-bottom: 10%;
+    color: rgb(186, 183, 183);
+    
+}
+.item-phimdecu .title-phim {
+    font-family: fontnav;
+}
+.item-phimdecu div {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+}
+#menu-right {
+    display: none;
+    background-color: rgba(28, 28, 28, 1);
+    height: fit-content;
+    width: 100%;
+    padding: 10px;
+}
+#menu-right ul {
+    margin: 0;
+    padding: 0;
+}
+#menu-right ul li {
+    display: grid;
+    grid-template-columns: 18% 82%;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#menu-right ul li img {
+    width: 100%;
+    border: 1px solid white;
+}
+#menu-right ul li div {
+    padding-left: 10px;
+    color: rgb(101, 101, 101);
+}
+#menu-right ul li div a {
+    color: rgba(196, 196, 196, 1);
+    text-decoration: none;
+}
+
 
 /* Đổi màu thanh cuộn trình duyệt */
 ::-webkit-scrollbar {
@@ -247,6 +336,10 @@ ul .bodder-menucon:hover>#menucon {
     .title-phim {
         font-size: 20px;
     }
+    /* reponsive cho phim đề cử */
+    .bodder-phimdecu {
+        grid-template-columns: auto auto auto;
+    }
 }
 
 @media (min-width: 768px){
@@ -265,11 +358,21 @@ ul .bodder-menucon:hover>#menucon {
         padding: 20px;
     }
     /* reposive cho phim mới cập nhật*/
+    .title-phimmoicapnhat {
+        font-size: 18px;
+    }
     .title-phim {
         font-size: 25px;
     }
     .review-phim div {
         margin-bottom: 25px;
+    }
+    /* reponsive cho phim đề cử */
+    .bodder-phimdecu {
+        clear: both;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        row-gap: 20px;
     }
 }
 
@@ -363,13 +466,18 @@ ul .bodder-menucon:hover>#menucon {
         position: absolute;
         top: -30px;
     }
-    
+    .title-phimmoicapnhat {
+        font-size: 20px;
+        width: 90%;
+    }
     .bodder-phimmoicapnhat {
         display: grid;
         grid-template-columns: 49% 49%;
-        grid-gap: 2%;
+        grid-gap: 25px;
         width: 90%;
-        margin: 0 auto;
+        height: 100%;
+        padding-bottom: 0px;
+        margin-bottom: 20px;
     }
     
     .bodder-phimmoicapnhat .item-phimcapnhat {
@@ -400,14 +508,21 @@ ul .bodder-menucon:hover>#menucon {
     .review-phim div {
         margin-bottom: 18px;
     }
-    .review-phim div a{
-        color: rgb(129, 129, 214);
-        text-decoration: none;
+    /* reponsive cho thanh menu bên */
+    #menu-right {
+        display: block;
     }
-    .review-phim div a:hover{
-        color: chartreuse;
+    /* reponsive cho phim đề cử */
+    .phimdecu-trangchu {
+        width: 90%;
+        grid-template-columns: 78% 20%;
     }
-    
+    .bodder-phimdecu {
+        clear: both;
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        row-gap: 20px;
+    }
 }
 
 @media (min-width: 1200px) {
