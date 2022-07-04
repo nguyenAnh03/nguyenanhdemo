@@ -14,10 +14,9 @@ body {
 
 @font-face {
     font-family: fontnav;
-    src: url('../FONT/HeavyIE.ttf') format('truetype'),
-         url('../FONT/HeavyIEE.eot') format('embedded-opentype'),
-         url('../FONT/Heavy.woff') format('woff'),
-         url('../FONT/HeavyIEEE.otf') format('otf');
+    src: url("../FONT/HeavyIE.ttf") format('truetype'),
+    url("../FONT/Grenze/Grenze-ExtraBold.ttf") format('truetype');
+         
 }
 
 header {
@@ -152,9 +151,6 @@ ul .bodder-menucon:hover>#menucon {
     width: 100%;
     border-radius: 5px;
 }
-.item-phimcapnhat .title-phim {
-    color: white;
-}
 .poster-phim {
     position: relative;
     overflow: hidden;
@@ -184,15 +180,35 @@ ul .bodder-menucon:hover>#menucon {
     color: white;
     font-size: 15px;
     cursor: pointer;
+    outline: none;
+    border: none;
+}
+.title-phim {
+    height: 10%;
+    overflow: hidden;
+    font-family: fontnav;
+    font-size: 10px;
+    color: rgba(252, 185, 0, 1);
 }
 .review-phim {
     margin-top: 2%;
-    height: 93%;
+    height: 87%;
     width: 100%;
     background-color: #000;
     border-radius: 10px;
 }
 
+/* Đổi màu thanh cuộn trình duyệt */
+::-webkit-scrollbar {
+    background: #000;
+    width: 11px;
+    height: 11px;
+}
+/* Màu nền thanh cuộn */
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 10px;
+}
 
 
 
