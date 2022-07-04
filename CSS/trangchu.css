@@ -46,7 +46,7 @@ header>.logo {
     text-align: left;
 }
 header>.header>img {
-    width: 90%;
+    width: 60%;
 }
 
 .nav-ul {
@@ -102,16 +102,16 @@ header #icon-menu, #icon-search {
 
 @media (min-width: 576px){
     header>.header>img {
-        width: 50%;
+        width: 40%;
     }
 }
 
 @media (min-width: 768px){
     header>.header>img {
-        width: 50%;
+        width: 40%;
     }
     header #icon-menu, #icon-search {
-        font-size: 30px;
+        font-size: 25px;
     }
 }
 
