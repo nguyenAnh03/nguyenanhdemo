@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cinema - Trang Chủ</title>
     <link rel="stylesheet" href="CSS/trangchu.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="  crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 </head>
 
 <body>
@@ -50,9 +52,16 @@
 
                 </section>
             </div>
-            
+
         </article>
     </div>
 </body>
 
 </html>
+<script>
+    $(document).ready(function() { /* sau khi html load và sẵn sàng*/
+        $('#icon-menu').click(function(){ /*thực hiện hàm click*/
+            $('nav').slideToggle(); /*xổ nav xuống khi bấm #icon-menu*/
+        });
+    })
+</script>
