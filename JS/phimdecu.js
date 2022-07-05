@@ -10,7 +10,7 @@ console.log(listMovieOffer.length);
 
 for (let i = 0; i < listMovieOffer.length; i++) {
     var content = `<section class="item-phimdecu">
-                        <img src="../IMAGE/TrangChu/img-decu/${listMovieOffer[i].id}.webp" title="${listMovieOffer[i].ten}">
+                        <img src="IMAGE/TrangChu/img-decu/${listMovieOffer[i].id}.webp" title="${listMovieOffer[i].ten}">
                         <a class="title-phim" href="">${listMovieOffer[i].ten}</a> 
                         <div>Năm sản xuất: ${listMovieOffer[i].nam}</div>
                         <div>Thể loại: `;
@@ -49,7 +49,7 @@ function listmovieright() {
     for (let i = 0; i <listMovieOffer.length; i++) {
         var menu = `
         <li>
-            <img src="../IMAGE/TrangChu/img-decu/${listMovieOffer[i].id}.webp" title="${listMovieOffer[i].ten}">
+            <img src="IMAGE/TrangChu/img-decu/${listMovieOffer[i].id}.webp" title="${listMovieOffer[i].ten}">
             <div>
                 <a href="">${listMovieOffer[i].ten}</a>
                 <p>Năm: ${listMovieOffer[i].nam}</p>
