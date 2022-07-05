@@ -6,7 +6,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #333;
-    background-image: url("../IMAGE/TrangChu/nen-web.png");
+    background-image: url("../IMAGE/TrangChu/img-login/nen-web.png");
     background-blend-mode: hard-light;
     background-size: cover;
     background-attachment: fixed;
@@ -224,7 +224,7 @@ ul .bodder-menucon:hover>#menucon {
     text-decoration: none;
 }
 .review-phim div a:hover{
-    color: chartreuse;
+    color: rgba(252, 185, 0, 1);
 }
 
 /* Các phim đề cử */
@@ -259,10 +259,26 @@ ul .bodder-menucon:hover>#menucon {
 }
 .item-phimdecu .title-phim {
     font-family: fontnav;
+    text-decoration: none;
 }
 .item-phimdecu div {
     font-family: Arial, Helvetica, sans-serif;
     margin-top: 10px;
+}
+.item-phimdecu:hover img{
+    filter: brightness(50%); /*điều chỉnh độ sáng của hình ảnh*/
+    transition: all 0.1s;
+}
+.item-phimdecu>a:hover {
+    text-decoration: underline;
+    transition: all 1s ease-in-out;
+}
+.item-phimdecu div a {
+    color: rgb(129, 129, 214);
+    text-decoration: none;
+}
+.item-phimdecu div a:hover{
+    color: rgba(252, 185, 0, 1);
 }
 #menu-right {
     display: none;
@@ -280,6 +296,8 @@ ul .bodder-menucon:hover>#menucon {
     grid-template-columns: 18% 82%;
     list-style: none;
     font-family: Arial, Helvetica, sans-serif;
+    border-bottom: 1px dashed white;
+    margin-bottom: 10px;
 }
 #menu-right ul li img {
     width: 100%;
@@ -292,6 +310,10 @@ ul .bodder-menucon:hover>#menucon {
 #menu-right ul li div a {
     color: rgba(196, 196, 196, 1);
     text-decoration: none;
+}
+#menu-right ul li div:hover a {
+    color: rgba(252, 185, 0, 1);
+    text-decoration: underline;
 }
 
 
@@ -403,7 +425,7 @@ ul .bodder-menucon:hover>#menucon {
     header #input {
         display: inline;
         background-color: rgba(58, 58, 58, 1);
-        background-image: url('../IMAGE/TrangChu/logo-tim-kiem.png');
+        background-image: url('../IMAGE/TrangChu/img-login/logo-tim-kiem.png');
         background-size: contain;
         background-position: right;
         background-repeat: no-repeat;
@@ -550,7 +572,7 @@ ul .bodder-menucon:hover>#menucon {
 
     /* reposive cho phim mới cập nhật*/
     .title-phim {
-        font-size: 22px;
+        font-size: 20px;
     }
     
 }
