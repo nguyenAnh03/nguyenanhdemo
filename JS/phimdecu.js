@@ -89,7 +89,7 @@ function doitrang(numberindex, totalItem) {
     for (i = numberindex; i < totalItem; i++) {
         var content = `<section class="item-phimdecu">
                             <img src="IMAGE/TrangChu/img-decu/${listMovieOffer[i].id}.webp" title="${listMovieOffer[i].ten}">
-                            <a class="title-phim" href="https://short.ink/FUglf4Si_">${listMovieOffer[i].ten}</a> 
+                            <a class="title-phim" href="xemphim.html">${listMovieOffer[i].ten}</a> 
                             <div>Năm sản xuất: ${listMovieOffer[i].nam}</div>
                             <div>Thể loại: `;
         for (let j = 0; j < listMovieOffer[i].theloai.length; j++) {
