@@ -5,10 +5,10 @@ var listmovie = [
     { name: 'Yêu tinh (2015)', daodien: 'Gil Kenan do David Lindsay-Abaire', quocgia: 'Hoa Kỳ', nam: 2015, theloai: ['Ma-kinh dị'] }
 ];
 var listimg = [
-    '../IMAGE/TrangChu/img-capnhat/tiectrangmau.webp',
-    '../IMAGE/TrangChu/img-capnhat/matranhoisinh.webp',
-    '../IMAGE/TrangChu/img-capnhat/thuyquairunggomun.webp',
-    '../IMAGE/TrangChu/img-capnhat/yeutinh.webp'
+    'IMAGE/TrangChu/img-capnhat/tiectrangmau.webp',
+    'IMAGE/TrangChu/img-capnhat/matranhoisinh.webp',
+    'IMAGE/TrangChu/img-capnhat/thuyquairunggomun.webp',
+    'IMAGE/TrangChu/img-capnhat/yeutinh.webp'
 ];
 
 for (let index = 0; index < listmovie.length; index++) {
