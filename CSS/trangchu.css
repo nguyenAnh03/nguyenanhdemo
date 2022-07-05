@@ -15,8 +15,8 @@ body {
 @font-face {
     font-family: fontnav;
     src: url("../FONT/HeavyIE.ttf") format('truetype'),
-    url("../FONT/Grenze/Grenze-ExtraBold.ttf") format('truetype');
-         
+        url("../FONT/Grenze/Grenze-ExtraBold.ttf") format('truetype');
+
 }
 
 header {
@@ -31,6 +31,7 @@ header {
 header>.logo {
     text-align: left;
 }
+
 header>.header>img {
     width: 60%;
 }
@@ -41,17 +42,20 @@ header>.header>img {
     font-family: fontnav;
     color: white;
 }
+
 .nav-ul li a {
     text-decoration: none;
     color: white;
 }
+
 /* Không hiển thị thanh điều hướng */
 .nav-ul {
     list-style: none;
     padding: 0;
     display: block;
 }
-.nav-primary{
+
+.nav-primary {
     display: none;
     width: 100vw;
     background-color: #000;
@@ -59,28 +63,50 @@ header>.header>img {
 }
 
 /* không hiển thị thanh input tìm kiếm */
-.head{
+.head {
     display: none;
+    margin-bottom: 10px;
+    width: 100vw;
 }
-/* Hiển thị icon menu và icon tìm kiếm */
-header #icon-menu, #icon-search {
+
+#input {
+    display: inline;
+    background-color: rgba(58, 58, 58, 1);
+    border: none;
+    outline: none;
+    width: 60%;
+    border-radius: 20px;
+    padding: 8px;
+    padding-left: 15px;
+    margin: 0 auto;
+    color: rgb(248, 245, 245);
+    font-size: 10px;
+}
+
+/* Hiển thị icon menu*/
+header #icon-menu,
+#icon-search {
     margin: auto 0;
     font-size: 20px;
     cursor: pointer;
 }
+
 /* Không hiển thị banner quảng cáo */
-.context-trangchu .banner-trangchu {
+.content-trangchu .banner-trangchu {
     display: none;
 }
+
 /* Hiện thị menu */
 .nav-primary .nav-ul {
     width: 100%;
     margin: 0 auto;
 }
- .nav-ul li a{
+
+.nav-ul li a {
     font-size: 12px;
 }
- .nav-ul li{
+
+.nav-ul li {
     display: inline;
     font-size: 12px;
     padding: 10px 10px;
@@ -93,6 +119,7 @@ ul li>#menucon {
     border-radius: 5px;
     width: 100px;
 }
+
 ul #menucon li {
     border-bottom: 1px solid salmon;
     display: block;
@@ -100,15 +127,18 @@ ul #menucon li {
     margin: 0;
     padding: 10px;
 }
+
 ul #menucon li a {
     font-size: 12px;
     padding: 5px;
-    
+
 }
+
 .bodder-menucon {
     z-index: 1;
     position: relative;
 }
+
 ul .bodder-menucon:hover>#menucon {
     display: block;
     background-color: #333;
@@ -116,17 +146,18 @@ ul .bodder-menucon:hover>#menucon {
     top: 22px;
     right: 0;
 }
+
 .bodder-menucon #menucon li:hover {
     border-bottom: 1px solid white;
 }
+
 .nav-primary .nav-ul li a:hover {
     color: rgba(252, 185, 0, 1);
 }
+
 .nav-primary .nav-ul li:hover {
     color: rgba(252, 185, 0, 1);
 }
-
-
 
 /*các phim mới cập nhật*/
 .title-phimmoicapnhat {
@@ -138,6 +169,7 @@ ul .bodder-menucon:hover>#menucon {
     margin: 20px auto;
     text-transform: uppercase;
 }
+
 .bodder-phimmoicapnhat {
     display: grid;
     grid-template-columns: 100%;
@@ -154,18 +186,21 @@ ul .bodder-menucon:hover>#menucon {
     border-radius: 10px;
     padding: 5px;
     display: grid;
-    grid-template-columns:  40% 59%;
+    grid-template-columns: 40% 59%;
     gap: 1%;
 }
+
 .item-phimcapnhat img {
     width: 100%;
     height: 99%;
     border-radius: 5px;
 }
+
 .poster-phim {
     position: relative;
     overflow: hidden;
 }
+
 .button {
     position: absolute;
     bottom: -50px;
@@ -178,12 +213,14 @@ ul .bodder-menucon:hover>#menucon {
     z-index: -1;
     opacity: 0;
 }
+
 .poster-phim:hover>.button {
     z-index: 1;
     opacity: 1;
     transform: translateY(-53px);
     transition: all 0.5s ease;
 }
+
 .button button {
     background-color: rgba(58, 176, 255, 1);
     padding: 5px 10px;
@@ -194,17 +231,20 @@ ul .bodder-menucon:hover>#menucon {
     outline: none;
     border: none;
 }
+
 .button .button-xem {
     background-color: red;
     margin-right: 10px;
 }
+
 .title-phim {
     height: 10%;
     overflow: hidden;
     font-family: fontnav;
-    font-size: 12px;
+    font-size: 13px;
     color: rgba(252, 185, 0, 1);
 }
+
 .review-phim {
     margin-top: 2%;
     height: 87%;
@@ -215,15 +255,18 @@ ul .bodder-menucon:hover>#menucon {
     font-family: sans-serif;
     padding: 10px;
 }
+
 .review-phim div {
     margin-bottom: 5px;
     font-size: 10px;
 }
-.review-phim div a{
+
+.review-phim div a {
     color: rgb(129, 129, 214);
     text-decoration: none;
 }
-.review-phim div a:hover{
+
+.review-phim div a:hover {
     color: rgba(252, 185, 0, 1);
 }
 
@@ -236,61 +279,81 @@ ul .bodder-menucon:hover>#menucon {
     grid-template-columns: 100%;
     gap: 20px;
 }
+
 .bodder-phimdecu {
     clear: both;
     display: grid;
     grid-template-columns: 50% 50%;
     row-gap: 20px;
 }
-.phimdecu-trangchu #menu-right {
-    width: 100%;
-}
+
 .bodder-phimdecu .item-phimdecu img {
     width: 100%;
 }
+
 .item-phimdecu {
-    width: 92%; 
+    width: 92%;
     height: fit-content;
     background-color: rgba(51, 51, 51, 1);
     padding: 2%;
     padding-bottom: 10%;
     color: rgb(186, 183, 183);
-    
+
 }
+
 .item-phimdecu .title-phim {
     font-family: fontnav;
     text-decoration: none;
+    color: #fff;
 }
+
 .item-phimdecu div {
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
     margin-top: 10px;
 }
-.item-phimdecu:hover img{
-    filter: brightness(50%); /*điều chỉnh độ sáng của hình ảnh*/
+
+.item-phimdecu:hover img {
+    filter: brightness(50%);
+    /*điều chỉnh độ sáng của hình ảnh*/
     transition: all 0.1s;
 }
+
 .item-phimdecu>a:hover {
     text-decoration: underline;
-    transition: all 1s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    color: rgba(252, 185, 0, 1);
 }
+
 .item-phimdecu div a {
     color: rgb(129, 129, 214);
     text-decoration: none;
 }
-.item-phimdecu div a:hover{
+
+.item-phimdecu div a:hover {
     color: rgba(252, 185, 0, 1);
 }
+
+/* Thanh menu bên phải */
+.phimdecu-trangchu #menu-right {
+    width: 100%;
+}
+
 #menu-right {
     display: none;
     background-color: rgba(28, 28, 28, 1);
-    height: fit-content;
+    height: 700px;
     width: 100%;
+    overflow-y: scroll;
     padding: 10px;
 }
+
 #menu-right ul {
     margin: 0;
     padding: 0;
+    font-size: 13px;
 }
+
 #menu-right ul li {
     display: grid;
     grid-template-columns: 18% 82%;
@@ -299,23 +362,48 @@ ul .bodder-menucon:hover>#menucon {
     border-bottom: 1px dashed white;
     margin-bottom: 10px;
 }
+
 #menu-right ul li img {
     width: 100%;
     border: 1px solid white;
 }
+
 #menu-right ul li div {
     padding-left: 10px;
     color: rgb(101, 101, 101);
 }
+
 #menu-right ul li div a {
     color: rgba(196, 196, 196, 1);
     text-decoration: none;
 }
+
 #menu-right ul li div:hover a {
     color: rgba(252, 185, 0, 1);
     text-decoration: underline;
 }
 
+/* Thanh chuyển trang phía dưới */
+.nav-bottom {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+#truoc,
+#sau {
+    background-color: #333;
+    width: max-content;
+    color: rgba(252, 185, 0, 1);
+    padding: 10px 20px;
+    font-weight: bold;
+    font-family: fontnav;
+    border-radius: 05px;
+    font-size: 10px;
+    border: none;
+    margin: 0 20px;
+    cursor: pointer;
+}
 
 /* Đổi màu thanh cuộn trình duyệt */
 ::-webkit-scrollbar {
@@ -323,72 +411,283 @@ ul .bodder-menucon:hover>#menucon {
     width: 11px;
     height: 11px;
 }
+
 /* Màu nền thanh cuộn */
 ::-webkit-scrollbar-thumb {
     background: #333;
     border-radius: 10px;
 }
 
+/* Css cho footer */
+.before-footer {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 9%, rgba(241, 247, 249, 0) 100%);
+    height: 100px;
+}
+
+.footer {
+    background-color: #000;
+    background-image: url("/IMAGE/TrangChu/img-login/footer.webp");
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 10px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.footer .logo-footer div {
+    color: white;
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 10px;
+    font-size: 10px;
+
+}
+
+footer {
+    background-color: #000;
+}
+
+.footer .logo-footer img {
+    width: 50%;
+}
+
+.theloai-footer ul {
+    padding: 0;
+    margin: 0;
+}
+
+.theloai-footer ul li {
+    list-style: none;
+}
+ .footer .theloai-footer {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    position: relative;
+}
+.theloai-footer:first-child {
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    width: 70%;
+}
+.theloai-footer ul li {
+    list-style: none;
+    padding: 2px;
+    text-align: right;
+}
+
+.footer .theloai-footer .theloai-part2 li {
+    text-align: left;
+    padding-left: 30px;
+}
+.theloai-footer .theloai-part2 {
+    margin-top: 20px;
+}
+
+.theloai-footer ul li a {
+    list-style: none;
+    text-decoration: none;
+    color: rgb(129, 129, 214);
+    font-size: 10px;
+}
+
+.footer .lienhe .theloai-title {
+    margin-bottom: 20px;
+}
+.theloai-footer .theloai-title {
+    width: 90vw;
+    text-align: center;
+    padding: 0;
+    margin:  0 auto;
+}
+.theloai-title {
+    font-family: fontnav;
+    color: rgba(252, 185, 0, 1);
+    text-transform: uppercase;
+    font-size: 12px;
+    margin: 0px;
+}
+
+.icon a,
+.icon {
+    display: inline;
+    font-size: 15px;
+    padding: 5px;
+    color: #fff;
+}
+
+.icon:hover a {
+    color: violet;
+}
+
 @media (min-width: 500px) {
+    .title-phimmoicapnhat {
+        font-size: 20px;
+    }
+
     .title-phim {
         font-size: 18px;
     }
+
     .review-phim {
         padding: 15px;
     }
+
     .review-phim div {
         margin-bottom: 18px;
         font-size: 15px;
     }
+
+    /* reponsive phim đề cử */
+    .item-phimdecu div {
+        font-size: 16px;
+    }
+    /* reponsive footer */
+    .footer .logo-footer img {
+        width: 30%;
+    }
+    .footer .logo-footer div {
+        font-size: 13px;
+    }
+
+    .theloai-footer:first-child {
+        padding: 0;
+        margin: 0;
+        text-align: left;
+        width: 70%;
+    }
+
+    .theloai-footer ul li {
+        list-style: none;
+        padding: 5px;
+        padding-right: 20px;
+        text-align: right;
+    }
+    
+    .theloai-footer .theloai-part2 {
+        margin-top: 30px;
+    }
+    .theloai-footer .theloai-part2 li {
+        text-align: left;
+    }
+    .theloai-footer ul li a {
+        font-size: 13px;
+    }
+    
+    .theloai-title {
+        font-size: 15px;
+    }
+    
+    .icon a,
+    .icon {
+        font-size: 18px;
+    }
 }
 
-@media (min-width: 576px){
+@media (min-width: 576px) {
+
     /* reposive cho header và menu*/
     header>.header>img {
         width: 40%;
     }
-    .nav-ul li a{
+
+    .nav-ul li a {
         font-size: 15px;
     }
-     .nav-ul li{
+
+    .nav-ul li {
         font-size: 15px;
         padding: 20px;
     }
+
+    #input {
+        width: 50%;
+        background-image: url("/IMAGE/TrangChu/img-login/logo-tim-kiem.png");
+        background-position: right;
+        background-size: contain;
+        background-repeat: no-repeat;
+        font-size: 15px;
+        padding: 10px;
+    }
+
     /* reposive cho phim mới cập nhật*/
     .title-phim {
         font-size: 20px;
     }
+
     /* reponsive cho phim đề cử */
     .bodder-phimdecu {
         grid-template-columns: auto auto auto;
     }
+
+    .item-phimdecu .title-phim {
+        font-size: 18px;
+    }
+
+    /* reponsive footer */
+
+    .theloai-footer:first-child {
+        padding: 0;
+        margin: 0;
+        text-align: left;
+        width: 70%;
+    }
+   
+    .theloai-footer ul li a {
+        font-size: 13px;
+    }
+    
+    .theloai-title {
+        font-size: 15px;
+    }
+    
+    .icon a,
+    .icon {
+        font-size: 18px;
+    }
 }
 
-@media (min-width: 768px){
+@media (min-width: 768px) {
+
     /* reposive cho header và menu*/
     header>.header>img {
         width: 40%;
     }
-    header #icon-menu, #icon-search {
+
+    header #icon-menu,
+    #icon-search {
         font-size: 25px;
     }
-    .nav-ul li a{
+
+    .nav-ul li a {
         font-size: 15px;
     }
-     .nav-ul li{
+
+    .nav-ul li {
         font-size: 15px;
         padding: 20px;
     }
+
     /* reposive cho phim mới cập nhật*/
     .title-phimmoicapnhat {
         font-size: 18px;
     }
+
     .title-phim {
-        font-size: 25px;
+        font-size: 20px;
     }
+
     .review-phim div {
         margin-bottom: 25px;
     }
+
     /* reponsive cho phim đề cử */
     .bodder-phimdecu {
         clear: both;
@@ -396,9 +695,44 @@ ul .bodder-menucon:hover>#menucon {
         grid-template-columns: auto auto auto auto;
         row-gap: 20px;
     }
+
+    /* Thanh menu bên dưới */
+    #truoc,
+    #sau {
+        font-size: 15px;
+    }
+
+    /* reponsive footer */
+    .footer {
+        grid-template-columns: 33.33% 33.33% 33.33%;
+    }
+    .footer .logo-footer img {
+        width: 70%;
+    }
+    .theloai-footer .theloai-title {
+        width: 100%;
+        text-align: right;
+    }
+    .footer .logo-footer img {
+        width: 50%;
+    }
+    
+    .theloai-footer ul li a {
+        font-size: 15px;
+    }
+    
+    .theloai-title {
+        font-size: 18px;
+    }
+    
+    .icon a,
+    .icon {
+        font-size: 22px;
+    }
 }
 
 @media (min-width: 992px) {
+
     /* reposive cho header và menu*/
     header {
         display: grid;
@@ -407,21 +741,36 @@ ul .bodder-menucon:hover>#menucon {
         border-bottom: 4px solid rgba(252, 185, 0, 1);
         text-align: center;
     }
+
     header .header {
         margin: auto 0;
-    }
-    .container header #icon-menu, #icon-search{
-        display: none;
-    }
-    .nav-primary {
         width: 100%;
     }
+
+    header #bodder-input {
+        display: inline !important;
+    }
+
+    header #icon-menu,
+    #icon-search {
+        display: none;
+    }
+
+    .nav-primary {
+        width: 100%;
+        text-align: right;
+        padding-right: 10px;
+        display: inline !important;
+    }
+
     .nav-primary ul {
         display: inline;
     }
-    .nav-ul:hover li{
+
+    .nav-ul:hover li {
         display: inline;
     }
+
     header #input {
         display: inline;
         background-color: rgba(58, 58, 58, 1);
@@ -437,24 +786,18 @@ ul .bodder-menucon:hover>#menucon {
         padding-left: 15px;
         color: rgb(248, 245, 245);
     }
-    
+
     header>.header>img {
         width: 100%;
     }
-    
+
     .nav-ul {
         list-style: none;
         display: inline;
         padding: 0;
         width: 100%;
     }
-    
-    .nav-primary {
-        text-align: right;
-        padding-right: 10px;
-        display: inline;
-    }
-    
+
     .nav-ul li {
         text-transform: uppercase;
         font-family: fontnav;
@@ -464,14 +807,15 @@ ul .bodder-menucon:hover>#menucon {
         margin: 20px;
         padding: 0;
     }
+
     .nav-ul li a {
         text-decoration: none;
         color: white;
         font-size: 15px;
     }
-    
 
-    .context-trangchu .banner-trangchu {
+
+    .content-trangchu .banner-trangchu {
         display: block;
         width: 90%;
         height: 220px;
@@ -482,16 +826,18 @@ ul .bodder-menucon:hover>#menucon {
         border-radius: 5px;
         position: relative;
     }
-    
+
     .banner-trangchu img {
         width: 100vw;
         position: absolute;
         top: -30px;
     }
+
     .title-phimmoicapnhat {
         font-size: 20px;
         width: 90%;
     }
+
     .bodder-phimmoicapnhat {
         display: grid;
         grid-template-columns: 49% 49%;
@@ -501,22 +847,23 @@ ul .bodder-menucon:hover>#menucon {
         padding-bottom: 0px;
         margin-bottom: 20px;
     }
-    
+
     .bodder-phimmoicapnhat .item-phimcapnhat {
         background-color: rgba(53, 52, 52, 0.73);
         width: 100%;
     }
-    
-    
+
+
     .head {
         display: inline;
     }
+
     header .head .input-form {
         height: 40px;
         width: 100%;
         position: relative;
     }
-    
+
     .head .input-form input {
         width: 100%;
         border: none;
@@ -527,35 +874,50 @@ ul .bodder-menucon:hover>#menucon {
     .title-phim {
         font-size: 18px;
     }
+
     .review-phim div {
         margin-bottom: 18px;
     }
+
     /* reponsive cho thanh menu bên */
     #menu-right {
         display: block;
     }
+
     /* reponsive cho phim đề cử */
     .phimdecu-trangchu {
         width: 90%;
         grid-template-columns: 78% 20%;
     }
+
+    .item-phimdecu .title-phim {
+        font-size: 15px;
+    }
+
     .bodder-phimdecu {
         clear: both;
         display: grid;
         grid-template-columns: 20% 20% 20% 20% 20%;
         row-gap: 20px;
     }
+
+    .item-phimdecu div {
+        font-size: 13px;
+    }
 }
 
 @media (min-width: 1200px) {
+
     /* reposive cho header và menu*/
     .nav-ul li {
         font-size: 18px;
         padding: 10px;
     }
+
     .nav-ul li a {
         font-size: 18px;
     }
+
     ul li>#menucon {
         display: none;
         padding: 5px 0 5px 0;
@@ -563,16 +925,47 @@ ul .bodder-menucon:hover>#menucon {
         border-radius: 5px;
         width: 150px;
     }
-    
+
     ul .bodder-menucon #menucon li a {
         font-size: 15px;
         padding: 10px;
-        
+
     }
 
     /* reposive cho phim mới cập nhật*/
-    .title-phim {
+    .item-phimdecu .title-phim {
+        font-size: 18px;
+    }
+
+    .item-phimdecu div {
+        font-size: 16px;
+    }
+
+    #menu-right ul {
+        font-size: 15px;
+    }
+
+    /* Thanh menu bên dưới */
+    #truoc,
+    #sau {
+        font-size: 16px;
+    }
+    /* reponsive footer */
+    .footer .logo-footer div {
+        font-size: 15px;
+    }
+    .theloai-footer ul li a {
+        font-size: 17px;
+    }
+    .footer .theloai-footer .theloai-part2 {
+        margin-top: 38px;
+    }
+    .theloai-title {
         font-size: 20px;
     }
     
+    .icon a,
+    .icon {
+        font-size: 25px;
+    }
 }
