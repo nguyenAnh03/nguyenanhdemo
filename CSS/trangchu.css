@@ -319,7 +319,7 @@ ul .bodder-menucon:hover>#menucon {
     transition: all 0.1s;
 }
 
-.item-phimdecu>a:hover {
+.item-phimdecu> .watchmovie:hover {
     text-decoration: underline;
     transition: all 0.2s ease-in-out;
     color: rgba(252, 185, 0, 1);
@@ -333,7 +333,9 @@ ul .bodder-menucon:hover>#menucon {
 .item-phimdecu div a:hover {
     color: rgba(252, 185, 0, 1);
 }
-
+.watchmovie {
+    cursor: pointer;
+}
 /* Thanh menu bên phải */
 .phimdecu-trangchu #menu-right {
     width: 100%;
@@ -373,12 +375,14 @@ ul .bodder-menucon:hover>#menucon {
     color: rgb(101, 101, 101);
 }
 
-#menu-right ul li div a {
+#menu-right ul li div div {
+    padding: 0px;
     color: rgba(196, 196, 196, 1);
     text-decoration: none;
+    cursor: pointer;
 }
 
-#menu-right ul li div:hover a {
+#menu-right ul li div:hover div {
     color: rgba(252, 185, 0, 1);
     text-decoration: underline;
 }
