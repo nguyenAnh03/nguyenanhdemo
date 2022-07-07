@@ -8,7 +8,7 @@ var listmovie = [
 for (let index = 0; index < listmovie.length; index++) {
     var content = ` <section class="item-phimcapnhat">
                         <div class="poster-phim">
-                            <img class="poster" src="/IMAGE/TrangChu/img-capnhat/${listmovie[index].id}.webp" alt="poster phim" title="${listmovie[index].name}">
+                            <img class="poster" src="IMAGE/TrangChu/img-capnhat/${listmovie[index].id}.webp" alt="poster phim" title="${listmovie[index].name}">
                             <div class="button">
                                 <button class="button-xem" onclick="watchmoviecapnhat(${index})">Xem phim</button>
                                 <button class="button-gt">Giới thiệu</button>

@@ -4,110 +4,7 @@
         url("../FONT/Grenze/Grenze-ExtraBold.ttf") format('truetype');
 
 }
-.content-xemphim {
-    height: fit-content;
-}
-.header-poster {
-    background-color: black;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 100%;
-    height: 20rem;
-}
-.poster {
-    width: 100%;
-    height: fit-content;
-    position: relative;
-}
-.poster>div{
-    width: 100%;
-    background-color: black;
-}
-.poster> .poster-child >div{
-    position: relative;
-    width: 100%;
-    margin: 0 auto;
-}
-.before-poster {
-    background: rgb(0, 0, 0);
-    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 9%, rgba(241, 247, 249, 0) 100%);
-    height: 30%;
-    width: 100%;
-    z-index: 1;
-    position: absolute;
-    top: 0;
-}
-.left-poster {
-    background: rgb(0, 0, 0);
-    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 10%, rgba(241, 247, 249, 0) 100%);
-    height: 100%;
-    width: 60%;
-    z-index: 1;
-    position: absolute;
-    left: 0;
-    top: 0;
-    transform: rotate(-4deg);
-    transform: translateX(-10px);
-}
-.right-poster {
-    background: rgb(0, 0, 0);
-    background: linear-gradient(-90deg, rgba(0, 0, 0, 1) 9%, rgba(241, 247, 249, 0) 100%);
-    height: 100%;
-    width: 60%;
-    z-index: 1;
-    position: absolute;
-    right: 0;
-    top: 0;
-}
-.bottom-poster {
-    background: rgb(0, 0, 0);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 9%, rgba(241, 247, 249, 0) 100%);
-    height: 500px;
-    width: 100%;
-    z-index: 1;
-    position: absolute;
-    bottom: 0;
-}
-.poster>div~.bottom-bodder-poster {
-    background: rgb(0, 0, 0);
-    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 9%, rgba(241, 247, 249, 0) 100%);
-    height: 150px;
-    width: 100%;
-    z-index: 1;
-}
-.poster .content-poster {
-    position: absolute;
-    top: 20px;
-    left: 5%;
-    width: 90%;
-    margin: 0 auto;
-    background-color: transparent; /*Làm trong suốt nền*/
-    z-index: 1;
-    display: grid;
-    grid-template-columns: 40% 50%;
-}
-.content-poster .bodder-img-poster {
-    text-align: center;
-}
-.content-poster img {
-    width: 80%;
-    border-radius: 10px;
-    margin: 0 auto;
-}
-.content-text .title-poster-text {
-    color: rgba(252, 185, 0, 1);
-    font-family: fontnav;
-    font-weight: bolder;
-    font-size: 15px;
-    text-transform: uppercase;
-}
-iframe {
-    width: 100%;
-    height: auto;
-}
 
-/*
-}
 .content-xemphim {
     height: fit-content;
 }
@@ -204,6 +101,6 @@ iframe {
     font-weight: bolder;
     font-size: 15px;
     text-transform: uppercase;
-} */
+} 
 
 
