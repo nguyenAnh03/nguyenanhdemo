@@ -150,11 +150,12 @@ iframe {
     height: 200px;
 }
 @media (min-width: 300px){
-    /* reponsive cho video-trailer */
     .poster-child {
-        height: 70vh;
-        min-height: 700px;
+        height: 80vh;
+        min-height: 740px;
     }
+    /* reponsive cho video-trailer */
+    
     #video-trailer {
         height: 300px;
     }
@@ -163,6 +164,10 @@ iframe {
     }
 }
 @media (min-width: 575px) {
+    .poster-child {
+        height: 80vh;
+        min-height: 700px;
+    }
     /* reponsive cho video-trailer */
     .content-poster img {
         width: 40%;
