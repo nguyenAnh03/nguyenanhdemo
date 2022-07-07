@@ -42,29 +42,38 @@
     </header>
     <article class="content-xemphim">
         <div class="poster">
-            <div class="poster-child">
-                <div>
-                    <div class="before-poster"></div>
-                    <div class="header-poster" id="poster-phim"></div>
-                    <div class="right-poster"></div>
-                    <div class="left-poster"></div>
-                    <div class="bottom-poster"></div>
+            <div class="poster-child" id="poster-phim">
+                <div class="header-poster">
                     <div class="content-poster">
                         <div class="bodder-img-poster">
-                            <img id="img-poster" alt="">
+                            <img id="img-poster" alt="poster-phim-Cinema">
                         </div>
                         <div class="content-text">
                             <div class="title-poster-text" id="text-name"></div>
                             <div class="content">
-                                <div>Thể loại: Tâm lí</div>
+                                <div class="quality-phim">Chất lượng: <span>Full HD</span></div>
+                                <div id="year-phim"></div>
+                                <div id="directo-phim"></div>
+                                <div id="country-phim"></div>
+                                <div id="category-phim"></div>
                             </div>
+                            <button id="xemtrailer"><a href="#trailer">Xem giới thiệu</a></button>
+                            <button id="xemphim"><a href="">Xem phim</a></button>
                         </div>
                     </div>
                 </div>
+                
             </div>
-            <div class="bottom-bodder-poster"></div>
             
-            
+            <div class="bottom-bodder-poster">
+                <div class="title-phim">Nội dung phim</div>
+                <div id="review-phim" class="review"></div> <span id='xemthem' onclick="Overflow()">Xem thêm</span>
+            </div>
+            <div class="title-phim trailer" id="trailer">Xem Trailer</div>
+            <div id="video-trailer">
+                <iframe id="url-trailer" width="942" height="530" src="https://www.youtube.com/embed/eXV0PPBVZhI" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                
+            </div>
         </div>
 
     </article>
@@ -107,6 +116,9 @@
 </body>
 
 </html>
+<script src="JS/xemphim.js"></script>
+<script src="JS/review.js"></script>
+
 <script>
     $(document).ready(function () { /* sau khi html load và sẵn sàng*/
         $('#icon-menu').click(function () { /*thực hiện hàm click*/
@@ -118,6 +130,22 @@
             $('#bodder-input').slideToggle();
             document.getElementById('nav-top').style.display = 'none';
         });
+        $(window).resize(function () {
+            var width = $(window).width();
+            console.log(width);
+            var imgphim = '';
+            var background = `IMAGE/TrangChu/img-xemphim/${localStorage.getItem('id-phim')}.webp`;
+            if (localStorage.getItem('type-phim') == 1) {
+                imgphim = `IMAGE/TrangChu/img-decu/${localStorage.getItem('id-phim')}.webp`;
+            } else {
+                imgphim = `IMAGE/TrangChu/img-capnhat/${localStorage.getItem('id-phim')}.webp`;
+            }
+            if (width < 992) {
+                document.getElementById('poster-phim').style.backgroundImage = `url(${imgphim})`;
+            } else {
+                document.getElementById('poster-phim').style.backgroundImage = `url(${background})`;
+            }
+        });
     })
 </script>
-<script src="JS/xemphim.js"></script>
+<script src="JS/trailer.js"></script>

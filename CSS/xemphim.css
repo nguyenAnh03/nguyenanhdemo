@@ -1,3 +1,11 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+}
+
 @font-face {
     font-family: fontnav;
     src: url("../FONT/HeavyIE.ttf") format('truetype'),
@@ -5,102 +13,253 @@
 
 }
 
-.content-xemphim {
-    height: fit-content;
-}
-.header-poster {
+.poster-child {
     background-color: black;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 100rem;
-}
-.poster {
-    width: 100%;
-    height: fit-content;
+    height: 70vh;
+    min-height: 650px;
+    overflow: hidden;
+    background-position: 100%;
     position: relative;
 }
-.poster>div{
+
+.header-poster {
+    background: rgba(0, 0, 0, 0.782);
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 1%, rgba(241, 247, 249, 0) 100%);
     width: 100%;
-    background-color: black;
-}
-.poster> .poster-child >div{
-    position: relative;
-    width: 100%;
-    margin: 0 auto;
-}
-.before-poster {
-    background: rgb(0, 0, 0);
-    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 9%, rgba(241, 247, 249, 0) 100%);
     height: 100%;
-    width: 100%;
-    z-index: 1;
-    position: absolute;
-    top: 0;
+    display: flex;
+    padding-top: 20px;
 }
-.left-poster {
-    background: rgb(0, 0, 0);
-    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 10%, rgba(241, 247, 249, 0) 100%);
-    height: 100%;
-    width: 60%;
-    z-index: 1;
-    position: absolute;
-    left: 0;
-    top: 0;
-    transform: rotate(-4deg);
-    transform: translateX(-10px);
-}
-.right-poster {
-    background: rgb(0, 0, 0);
-    background: linear-gradient(-90deg, rgba(0, 0, 0, 1) 9%, rgba(241, 247, 249, 0) 100%);
-    height: 100%;
-    width: 60%;
-    z-index: 1;
-    position: absolute;
-    right: 0;
-    top: 0;
-}
-.bottom-poster {
-    background: rgb(0, 0, 0);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 9%, rgba(241, 247, 249, 0) 100%);
-    height: 500px;
-    width: 100%;
-    z-index: 1;
-    position: absolute;
-    bottom: 0;
-}
-.poster>div~.bottom-bodder-poster {
-    background: rgb(0, 0, 0);
-    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 9%, rgba(241, 247, 249, 0) 100%);
-    height: 150px;
-    width: 100%;
-    z-index: 1;
-}
-.poster .content-poster {
-    position: absolute;
-    top: 20px;
-    left: 5%;
-    width: 90%;
-    margin: 0 auto;
-    background-color: transparent; /*Làm trong suốt nền*/
-    z-index: 1;
+
+.content-poster {
+    width: 80%;
     display: grid;
-    grid-template-columns: 40% 50%;
-}
-.content-poster .bodder-img-poster {
+    grid-template-columns: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
     text-align: center;
 }
+
 .content-poster img {
     width: 80%;
     border-radius: 10px;
     margin: 0 auto;
+    border: 1px solid rgba(255, 245, 238, 0.364);
 }
+
+.content-text div {
+    display: block;
+    width: 100%;
+    color: white;
+}
+
 .content-text .title-poster-text {
-    color: rgba(252, 185, 0, 1);
+    color: white;
     font-family: fontnav;
     font-weight: bolder;
     font-size: 15px;
     text-transform: uppercase;
-} 
+    height: fit-content;
+}
 
+#xemtrailer,
+#xemphim {
+    padding: 8px 0px;
+    border-radius: 10px;
+    width: 100px;
+    background-color: rgb(234, 85, 85);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
 
+#xemtrailer {
+    background-color: rgb(135, 135, 245);
+    margin-right: 10px;
+}
+
+#xemtrailer>a,
+#xemphim>a {
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+}
+
+#url-trailer {
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.content>div {
+    padding: 10px 0px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.content>div>span {
+    font-weight: normal;
+    color: rgb(129, 129, 214);
+}
+
+.bottom-bodder-poster .title-phim {
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.review {
+    color: white;
+    width: 90%;
+    font-size: 18px;
+    color: rgba(250, 253, 255, 0.773);
+    margin: 0 auto;
+    overflow: hidden;
+    height: 25px;
+    font-size: 15px;
+    line-height: 30px;
+}
+#xemthem {
+    width: 90%;
+    margin: 0 5%;
+    color: rgb(158, 104, 208); cursor: pointer;
+}
+.trailer {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0px;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+#video-trailer {
+    width: 100%;
+    height: 200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+iframe {
+    width: 100%;
+    border: none;
+    height: 200px;
+}
+
+@media (min-width: 992px) {
+
+    /* reponsive cho poster */
+    .poster-child {
+        background-color: black;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 70vh;
+        min-height: 300px;
+        overflow: hidden;
+        background-position: 50% 50%;
+    }
+
+    .content-poster {
+        padding-left: 20px;
+        color: rgb(242, 242, 242);
+        text-align: center;
+        display: grid;
+        grid-template-columns: 30% 70%;
+    }
+
+    .content-poster img {
+        width: 80%;
+        border-radius: 10px;
+        margin: 0 auto;
+        border: 1px solid rgba(255, 245, 238, 0.364);
+    }
+
+    .content-text {
+        text-align: left;
+    }
+
+    .content-poster .title-poster-text {
+        font-size: 40px;
+        color: white;
+        margin-bottom: 20px;
+    }
+
+    .content-poster .title-poster-text:hover {
+        color: rgba(252, 185, 0, 1);
+        transition: all 1s;
+    }
+
+    .bottom-bodder-poster {
+        width: 80%;
+        margin: 0 auto;
+
+    }
+
+    .bottom-bodder-poster .title-phim {
+        width: 100%;
+        font-size: 25px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+
+    .review {
+        width: 100%;
+        font-size: 18px;
+        color: rgba(250, 253, 255, 0.773);
+        margin: 0 auto;
+        overflow: hidden;
+        height: 65px;
+        line-height: 30px;
+    }
+
+    .trailer {
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px 0px;
+        font-size: 25px;
+        text-transform: uppercase;
+    }
+
+    #video-trailer {
+        width: 60%;
+        height: 500px;
+        margin: 0 auto;
+    }
+
+    iframe {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+    }
+
+    #xemtrailer,
+    #xemphim {
+        padding: 10px 5px;
+        border-radius: 10px;
+        width: 120px;
+        background-color: rgb(234, 85, 85);
+        margin-top: 50px;
+    }
+
+    #xemtrailer {
+        background-color: rgb(135, 135, 245);
+        margin-right: 20px;
+    }
+
+    #xemtrailer>a,
+    #xemphim>a {
+        text-decoration: none;
+        color: white;
+        font-size: 15px;
+    }
+
+    #url-trailer {
+        border: 3px solid #333;
+        border-radius: 20px;
+        padding: 5px;
+    }
+
+}

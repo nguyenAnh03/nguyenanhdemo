@@ -113,6 +113,8 @@ function watchmovie(j) {
             localStorage.setItem('name-movie', listItem[i].innerText);
             location = "xemphim.html";
             localStorage.setItem('id-phim', listMovieOffer[j].id);
+            localStorage.setItem('category-phim', listMovieOffer[j].theloai);
+            localStorage.setItem('year-phim', listMovieOffer[j].nam);
             localStorage.setItem('type-phim', 1);
             break;
         }

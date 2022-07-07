@@ -42,6 +42,8 @@ function watchmoviecapnhat(j) {
             localStorage.setItem('name-movie', listItem[i].innerText);
             location = "xemphim.html";
             localStorage.setItem('id-phim', listmovie[j].id);
+            localStorage.setItem('category-phim', listmovie[j].theloai);
+            localStorage.setItem('year-phim', listmovie[j].nam);
             localStorage.setItem('type-phim', 0);
             break;
         }

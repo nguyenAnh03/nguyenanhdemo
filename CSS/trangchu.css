@@ -431,7 +431,7 @@ ul .bodder-menucon:hover>#menucon {
 
 .footer {
     background-color: #000;
-    background-image: url("/IMAGE/TrangChu/img-login/footer.webp");
+    background-image: url('../IMAGE/TrangChu/img-login/footer.webp');
     background-size: 100vw;
     background-repeat: no-repeat;
     height: fit-content;
