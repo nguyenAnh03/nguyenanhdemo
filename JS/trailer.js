@@ -1,4 +1,5 @@
 var listUrl = [
+    { id: 'thegioikhunglong', linktrailer: '3y0KM5jUnmk'},
     { id:'emvatrinh', linktrailer: 'h0gnhCb5x7g'},
     { id: 'nguoikhoilua', linktrailer: 'Kj4j8x3Do34'},
     { id:'satthunhantao', linktrailer: 'NprcHuYuP54' },
@@ -13,7 +14,7 @@ var listUrl = [
     { id: 'hoaraemyeuanhratnhieu', linktrailer: 'jRQrMy8ROeE'},
     { id: 'thuyhautu', linktrailer: 'tssQAw2k9h4' },
     { id: 'thuamecondi', linktrailer: 'DkrxQbFwto0'},
-    { id: 'thuamecondi', linktrailer: 'pt81CJcWZy8'},
+    { id: 'thienngabongdem', linktrailer: '57hwFyB6ask'},
     { id: 'thuamecondi', linktrailer: 'pt81CJcWZy8'},
     { id: 'tiectrangmau', linktrailer: 'WiAjAc5MEWE' },
     { id: 'matranhoisinh', linktrailer: '4s8plIwRKq8'},
@@ -29,3 +30,6 @@ for (let i = 0; i < listUrl.length; i++) {
         break;
     }
 }
+setTimeout(() => {
+    console.clear();
+}, 1000);

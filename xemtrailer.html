@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cinema - Xem phim</title>
+    <title>Cinema - Trang Chủ</title>
     <link rel="stylesheet" href="CSS/trangchu.css">
-    <link rel="stylesheet" href="CSS/xemphim.css">
+    <link rel="stylesheet" href="CSS/xemtrailer.css">
     <link rel="icon" href="IMAGE/TrangChu/img-login/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
@@ -40,22 +40,41 @@
             </ul>
         </nav>
     </header>
-    <article class="content-xemphim">
-        <div id="title-xem-phim"></div>
-        <div class="videophim" id="movie-movie">
-            <iframe id="video-movie"
-                src="https://cdn.jwplayer.com/players/BeUCcY9q-2o6TYCRV.html" frameborder="0"
-                scrolling="auto" title="Người Khởi Lửa Full Hd - Firestarter Full Hd Vietsub Thuyết Minh"
-                style="position:absolute;" allowfullscreen>
-            </iframe>
+    <article class="content-xemtrailer">
+        <div class="poster">
+            <div class="poster-child" id="poster-phim">
+                <div class="header-poster">
+                    <div class="content-poster">
+                        <div class="bodder-img-poster">
+                            <img id="img-poster" alt="poster-phim-Cinema">
+                        </div>
+                        <div class="content-text">
+                            <div class="title-poster-text" id="text-name"></div>
+                            <div class="content">
+                                <div class="quality-phim">Chất lượng: <span>Full HD</span></div>
+                                <div id="year-phim"></div>
+                                <div id="directo-phim"></div>
+                                <div id="country-phim"></div>
+                                <div id="category-phim"></div>
+                            </div>
+                            <button id="xemtrailer"><a href="#trailer">Xem giới thiệu</a></button>
+                            <button id="xemphim"><a href="xemphim.html">Xem phim</a></button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="bottom-bodder-poster">
+                <div class="title-phim">Nội dung phim</div>
+                <div id="review-phim" class="review"></div> <span id='xemthem' onclick="Overflow()">Xem thêm</span>
+            </div>
+            <div class="title-phim trailer" id="trailer">Xem Trailer</div>
+            <div id="video-trailer">
+                <iframe id="url-trailer" width="942" height="530" src="https://www.youtube.com/embed/E5Lh8AAB3jw" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
         </div>
-        <div class="change-sever">
-            <div class="text-sever">Nếu lag hoặc không xem được, vui lòng đổi sever khác hoặc vào lại website</div>
-            <div class="title-sever">Đổi sever</div>
-            <button class="sever">#severHTP</button>
-            <button class="sever">#severLCR</button>
-        </div>
-        <div id="changetap"></div>
+
     </article>
     <div class="before-footer"></div>
     <footer>
@@ -96,7 +115,9 @@
 </body>
 
 </html>
-<script src="JS/xemphim.js"></script>
+<script src="JS/xemtrailer.js"></script>
+<script src="JS/review.js"></script>
+
 <script>
     $(document).ready(function () { /* sau khi html load và sẵn sàng*/
         $('#icon-menu').click(function () { /*thực hiện hàm click*/
@@ -108,6 +129,21 @@
             $('#bodder-input').slideToggle();
             document.getElementById('nav-top').style.display = 'none';
         });
+        $(window).resize(function () {
+            var width = $(window).width();
+            var imgphim = '';
+            var background = `IMAGE/TrangChu/img-xemphim/${localStorage.getItem('id-phim')}.webp`;
+            if (localStorage.getItem('type-phim') == 1) {
+                imgphim = `IMAGE/TrangChu/img-decu/${localStorage.getItem('id-phim')}.webp`;
+            } else {
+                imgphim = `IMAGE/TrangChu/img-capnhat/${localStorage.getItem('id-phim')}.webp`;
+            }
+            if (width < 992) {
+                document.getElementById('poster-phim').style.backgroundImage = `url(${imgphim})`;
+            } else {
+                document.getElementById('poster-phim').style.backgroundImage = `url(${background})`;
+            }
+        });
     })
 </script>
-
+<script src="JS/trailer.js"></script>

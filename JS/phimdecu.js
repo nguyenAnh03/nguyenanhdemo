@@ -1,4 +1,6 @@
  var listMovieOffer = [
+    { ten: 'Thế giới khủng long: Lãnh địa', nam: 2022, theloai: ['Hành động', 'Kinh dị'], id: 'thegioikhunglong' },
+    { ten: 'Thiên nga bóng đêm', nam: 2022, theloai: ['Truyền hình', 'Tình cảm'], id: 'thienngabongdem' },
     { ten: 'Em và Trịnh', nam: 2022, theloai: ['Tâm lí - Tình cảm'], id:'emvatrinh'},
     { ten: 'Người khởi lửa', nam: 2022, theloai: ['Kinh dị', 'Giật gân'], id: 'nguoikhoilua' },
     { ten: 'Sát thủ nhân tạo 2: Mẫu vật còn lại', nam: 2022, theloai: ['Kinh dị', 'Khoa học viễn tưởng'], id:'satthunhantao' },
@@ -12,7 +14,6 @@
     { ten: 'Chị Mười Ba: 3 ngày sinh tử', nam: 2021, theloai: ['Phiêu Lưu - Hành Động', 'Hài Hước', 'Phim Chiếu Rạp'], id: 'chimuoiba' },
     { ten: 'Hóa ra em yêu anh rất nhiều', nam: 2019, theloai: ['Tâm lí - Tình cảm'], id: 'hoaraemyeuanhratnhieu' },
     { ten: 'Thủy hầu tử', nam: 2022, theloai: ['Bí Ẩn','Kinh Dị','Đạo Đức','Kinh Dị'], id: 'thuyhautu' },
-    { ten: 'Thưa mẹ con đi', nam: 2019, theloai: ['Tâm lí - Tình cảm'], id: 'thuamecondi' },
     { ten: 'Thưa mẹ con đi', nam: 2019, theloai: ['Tâm lí - Tình cảm'], id: 'thuamecondi' },
     { ten: 'Thưa mẹ con đi', nam: 2019, theloai: ['Tâm lí - Tình cảm'], id: 'thuamecondi' },
 ];
@@ -111,7 +112,7 @@ function watchmovie(j) {
         console.log(i);
         if (listMovieOffer[j].ten == listItem[i].innerText){
             localStorage.setItem('name-movie', listItem[i].innerText);
-            location = "xemphim.html";
+            location = "xemtrailer.html";
             localStorage.setItem('id-phim', listMovieOffer[j].id);
             localStorage.setItem('category-phim', listMovieOffer[j].theloai);
             localStorage.setItem('year-phim', listMovieOffer[j].nam);
@@ -133,5 +134,6 @@ function listmovieright() {
             </div>
         </li>`;
         document.getElementById('menu-menu-right').innerHTML += menu;
+        console.log(listMovieOffer.length);
     }
 }

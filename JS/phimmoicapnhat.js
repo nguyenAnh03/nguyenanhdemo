@@ -10,8 +10,8 @@ for (let index = 0; index < listmovie.length; index++) {
                         <div class="poster-phim">
                             <img class="poster" src="IMAGE/TrangChu/img-capnhat/${listmovie[index].id}.webp" alt="poster phim" title="${listmovie[index].name}">
                             <div class="button">
-                                <button class="button-xem" onclick="watchmoviecapnhat(${index})">Xem phim</button>
-                                <button class="button-gt">Giới thiệu</button>
+                                <button class="button-xem" onclick="gotomovie(${index})" >Xem phim</button>
+                                <button class="button-gt" onclick="gototrailer(${index})">Giới thiệu</button>
                             </div>
                         </div>
                         <div class="content-phim">
@@ -40,7 +40,7 @@ function watchmoviecapnhat(j) {
         console.log(i);
         if (listmovie[j].name == listItem[i].innerText){
             localStorage.setItem('name-movie', listItem[i].innerText);
-            location = "xemphim.html";
+            
             localStorage.setItem('id-phim', listmovie[j].id);
             localStorage.setItem('category-phim', listmovie[j].theloai);
             localStorage.setItem('year-phim', listmovie[j].nam);
@@ -48,4 +48,12 @@ function watchmoviecapnhat(j) {
             break;
         }
     }
+}
+function gototrailer(j) {
+    watchmoviecapnhat(j);
+    location = "xemtrailer.html#trailer";
+}
+function gotomovie(j) {
+    watchmoviecapnhat(j);
+    location = "xemtrailer.html";
 }
