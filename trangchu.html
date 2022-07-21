@@ -8,8 +8,16 @@
     <title>Cinema - Trang Chủ</title>
     <link rel="stylesheet" href="CSS/trangchu.css">
     <link rel="icon" href="IMAGE/TrangChu/img-login/logo.png">
+    <!-- Link font icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <!-- Link Jquery -->
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <!-- Link Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 
 </head>
 
@@ -21,35 +29,100 @@
         <i class="fas fa-search header" id="icon-search" style="color: white;"></i>
         <i class="fas fa-bars header" id="icon-menu" style="color: white;"></i>
         <div class="header head" id="bodder-input">
-            <input type="text" name="" id="input" placeholder="Nhập phim muốn tìm">
+            <script src="https://cse.google.com/cse.js?cx=9dfd0e27c1f44d6ff"></script>
+            <div class="gcse-search" id="input"></div>
+            <!-- <input type="text" name="" id="input" placeholder="Nhập phim muốn tìm"> -->
         </div>
         <nav class="nav-primary header" id="nav-top">
             <ul class="nav-ul">
                 <li> <a href="">Trang chủ</a></li>
                 <li class="bodder-menucon">Thể loại
                     <ul id="menucon">
+                        <li><a href="reviewphim.html">Review phim</a></li>
                         <li><a href="">Chiếu rạp</a></li>
                         <li><a href="">Kinh dị</a></li>
                         <li><a href="">Tình cảm</a></li>
                         <li><a href="">Tâm lí</a></li>
                     </ul>
                 </li>
-                <li><a href="">Giới thiệu</a></li>
-                <li><a href="">Mua vé</a></li>
+                <li><a href="nhacphim.html">Nhạc phim</a></li>
+                <li><a href="">Thư viện</a></li>
             </ul>
         </nav>
     </header>
     <article class="content-trangchu">
         <div class="banner-trangchu">
-            <img src="IMAGE/TrangChu/img-login/Banner-Phim-Việt-Cha-Ma.webp" alt="">
+            <!-- <img id="banner-img" class="banner-item" src="IMAGE/TrangChu/img-login/Banner-Phim-Việt-Cha-Ma.webp" alt=""> -->
+            <div class="container1" data-aos="fade-up" data-aos-duration="2000">
+                <div class="container-fluid" style="overflow: hidden; margin: 0; padding: 0;">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators" style="position: absolute; top: 60%;">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                            <li data-target="#myCarousel" data-slide-to="3"></li>
+                            <li data-target="#myCarousel" data-slide-to="4"></li>
+                            <li data-target="#myCarousel" data-slide-to="5"></li>
+                            <li data-target="#myCarousel" data-slide-to="6"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="item active" style="height: 279.062px; width: 100%; ">
+                                <img src="IMAGE/TrangChu/img-login/banner_1.webp" alt="image-1"
+                                    style="width:100%; overflow: hidden; position: absolute; top: 0px;">
+                            </div>
+                            <div class="item" style="height: 279.062px;">
+                                <img src="IMAGE/TrangChu/img-login/banner_2.webp" alt="image-2"
+                                    style="width:100%; position: absolute; top: 0px;">
+                            </div>
+                            <div class="item" style="height: 279.062px;">
+                                <img src="IMAGE/TrangChu/img-login/banner_3.webp" alt="image-3"
+                                    style="width:100%;  overflow: hidden; position: absolute; top: 0px; object-fit: cover;">
+
+                            </div>
+                            <div class="item" style="height: 279.062px;">
+                                <img src="IMAGE/TrangChu/img-login/banner_4.webp" alt="image-4"
+                                    style="width:100%;  overflow: hidden; position: absolute; top: 0px; object-fit: cover;">
+
+                            </div>
+                            <div class="item" style="height: 279.062px;">
+                                <img src="IMAGE/TrangChu/img-login/banner_5.jpg" alt="image-5"
+                                    style="width:100%;  overflow: hidden; position: absolute; top: 0px; object-fit: cover;">
+
+                            </div>
+                            <div class="item" style="height: 279.062px;">
+                                <img src="IMAGE/TrangChu/img-login/banner_6.jpg" alt="image-5"
+                                    style="width:100%;  overflow: hidden; position: absolute; top: 0px; object-fit: cover;">
+
+                            </div>
+                            <div class="item" style="height: 279.062px;">
+                                <img src="IMAGE/TrangChu/img-login/banner_7.webp" alt="image-5"
+                                    style="width:100%;  overflow: hidden; position: absolute; top: 0px; object-fit: cover;">
+
+                            </div>
+                        </div>
+                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"
+                                style="position: absolute; top: 40%; left: 20px;"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"
+                                style="position: absolute; top: 40%; right: 20px;"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
         </div>
+
         <div class="phimmoicapnhat-trangchu">
             <div class="title-phimmoicapnhat">Phim mới cập nhật</div>
             <div class="bodder-phimmoicapnhat" id="bodder-phimmoicapnhat-id">
 
             </div>
         </div>
-        <div class="title-phimmoicapnhat">Phim đề cử</div>
+        <div class="title-phimmoicapnhat">Phim đề xuất</div>
         <div class="phimdecu-trangchu">
             <div class="bodder-phimdecu" id="bodder-phimdecu-id">
             </div>
@@ -74,7 +147,7 @@
             <div class="logo-footer">
                 <img src="IMAGE/TrangChu/img-login/logo.png" alt="">
                 <div>Copyright 2022 © Cinema.vn
-                    Xem phim mới miễn phí nhanh chất lượng cao. 
+                    Xem phim mới miễn phí nhanh chất lượng cao.
                     Xem Phim online Việt Sub, Thuyết minh, lồng tiếng chất
                     lượng HD. Xem phim nhanh online chất lượng cao</div>
             </div>
@@ -86,7 +159,7 @@
                     <li><a href="">Khoa học viễn tưởng</a></li>
                     <li><a href="">Kinh dị</a></li>
                     <li><a href="">Hành động</a></li>
-    
+
                 </ul>
                 <ul class="theloai-part2">
                     <li><a href="">Chiến tranh</a></li>
@@ -102,23 +175,45 @@
             </div>
         </div>
     </footer>
-
-
 </body>
 
 </html>
 <script>
+    checkDisabled(sessionStorage.getItem('index'));
     $(document).ready(function () { /* sau khi html load và sẵn sàng*/
         $('#icon-menu').click(function () { /*thực hiện hàm click*/
             $('nav').slideToggle(); /*xổ nav xuống khi bấm #icon-menu*/
             document.getElementById('bodder-input').style.display = 'none';
         });
 
-        $('#icon-search').click(function() {
+        $('#icon-search').click(function () {
             $('#bodder-input').slideToggle();
             document.getElementById('nav-top').style.display = 'none';
         });
     })
+    var arrayImage = [
+        'Banner-Phim-Việt-Cha-Ma.webp',
+        'Banner_2.webp',
+        'Banner_Phim.jpg'
+    ]
+    var index = 0;
+    setTimeout(() => {
+        var input = document.getElementById('gsc-i-id1');
+        var bgd = document.getElementById('gsc-iw-id1');
+        input.setAttribute('placeholder', 'Nhập vào đây ...');
+        input.onfocus = function () {
+            bgd.style.background = 'none';
+        }
+        input.onblur = function () {
+            if (input.value == "") {
+                bgd.style.background = "url('/IMAGE/TrangChu/img-login/logo-tim-kiem.png') right no-repeat";
+            }
+        }
+    }, 500);
+
 </script>
 <script src="JS/phimmoicapnhat.js"></script>
 <script src="JS/phimdecu.js"></script>
+<script>
+    listmovieright();
+</script>

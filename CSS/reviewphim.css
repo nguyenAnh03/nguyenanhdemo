@@ -1,0 +1,21 @@
+.content-reviewphim {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    gap: 20px;
+    width: 85%;
+    height: 100vh;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+.left-content-review {
+    background-color: aqua;
+}
+.right-content-reivew {
+    background-color: blanchedalmond;
+}
+.ytp-expand-pause-overlay .ytp-pause-overlay{
+    display: none;
+}
+iframe .html5-video-player .ytp-chrome-top {
+    display: none !important;
+}

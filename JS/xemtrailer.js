@@ -16,7 +16,7 @@ var listDirecto = [
     { id: 'thuyhautu', daodien: 'Huang Xingang', quocgia: 'Trung Quốc'},
     { id: 'thuamecondi',daodien: 'Trịnh Đình Lê Minh', quocgia: 'Việt Nam'},
     { id: 'thienngabongdem',daodien: 'Park Bong Sub', quocgia: 'Hàn Quốc'},
-    { id: 'thuamecondi',daodien: 'Trịnh Đình Lê Minh', quocgia: 'Việt Nam'},
+    { id: 'ghenong',daodien: 'James Cullen Bressack', quocgia: 'Âu Mỹ'},
     { id: 'tiectrangmau', daodien: 'Nguyễn Quang Dũng', quocgia: 'Việt Nam'},
     { id: 'matranhoisinh', daodien: 'Lana Wachowski', quocgia: 'Hoa Kỳ'},
     { id: 'thuyquairunggomun', daodien: 'Hạng Thu Lương, Hạng Hà Sinh', quocgia: 'Trung Quốc'},

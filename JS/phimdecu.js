@@ -5,21 +5,18 @@
     { ten: 'Người khởi lửa', nam: 2022, theloai: ['Kinh dị', 'Giật gân'], id: 'nguoikhoilua' },
     { ten: 'Sát thủ nhân tạo 2: Mẫu vật còn lại', nam: 2022, theloai: ['Kinh dị', 'Khoa học viễn tưởng'], id:'satthunhantao' },
     { ten: 'Hào khí chiến binh', nam: 2011, theloai: ['Kinh dị', 'Hành động'], id: 'haokhichienbinh' },
-    { ten: 'Nhện trong mạng', nam: 2019, theloai: ['Giật gân'], id: 'nhentrongmang' },
+    { ten: 'Nhện trong mạng', nam: 2019, theloai: ['Giật gân', 'Hành động'], id: 'nhentrongmang' },
     { ten: 'Bác sĩ Đường', nam: 2022, theloai: ['Tâm lí - Tình cảm'], id: 'bacsiduong' },
-    { ten: 'Người đàn ông', nam: 2022, theloai: ['Tâm Lý - Tình cảm', 'Khoa học viễn tưởng', 'Kinh dị - Ma'], id: 'nguoidanong' },
+    { ten: 'Người đàn ông', nam: 2022, theloai: ['Tâm Lý - Tình cảm', 'Kinh dị - Ma'], id: 'nguoidanong' },
     { ten: 'Người kế nhiệm Namsan', nam: 2020, theloai: ['Tâm lí - Tình cảm'], id: 'nguoikenhiemnamsan' },
     { ten: 'Con tàu Titanic', nam: 1997, theloai: ['Tâm lí - Tình cảm'], id: 'contautitanic' },
     { ten: 'Kiều', nam: 2021, theloai: ['Tâm lí - Tình cảm'], id: 'kieu' },
     { ten: 'Chị Mười Ba: 3 ngày sinh tử', nam: 2021, theloai: ['Phiêu Lưu - Hành Động', 'Hài Hước', 'Phim Chiếu Rạp'], id: 'chimuoiba' },
-    { ten: 'Hóa ra em yêu anh rất nhiều', nam: 2019, theloai: ['Tâm lí - Tình cảm'], id: 'hoaraemyeuanhratnhieu' },
+    { ten: 'Hóa Ra Em Rất Yêu Anh', nam: 2019, theloai: ['Tâm lí - Tình cảm'], id: 'hoaraemyeuanhratnhieu' },
     { ten: 'Thủy hầu tử', nam: 2022, theloai: ['Bí Ẩn','Kinh Dị','Đạo Đức','Kinh Dị'], id: 'thuyhautu' },
     { ten: 'Thưa mẹ con đi', nam: 2019, theloai: ['Tâm lí - Tình cảm'], id: 'thuamecondi' },
-    { ten: 'Thưa mẹ con đi', nam: 2019, theloai: ['Tâm lí - Tình cảm'], id: 'thuamecondi' },
+    { ten: 'Hot Seat', nam: 2022, theloai: ['Hành động','Hình sự'], id: 'ghenong' },
 ];
-
-console.log(listMovieOffer.length);
-listmovieright();
 
 var indexpage = 10;
 
@@ -28,7 +25,6 @@ if (listMovieOffer.length >10) {
 } else {
     changepage(0, listMovieOffer.length);
 }
-checkDisabled(sessionStorage.getItem('index'))
 
 function checkDisabled(sessionStr) {
     if (sessionStr-10 <= 0) {
@@ -109,6 +105,22 @@ function changepage(numberindex, totalItem) {
 function watchmovie(j) {
     var listItem = document.getElementsByClassName('watchmovie');
     for (let i = 0; i < listItem.length; i++) {
+        // console.log(i);
+        if (listMovieOffer[j].ten == listItem[i].innerText){
+            localStorage.setItem('name-movie', listItem[i].innerText);
+            location = "xemtrailer.html";
+            localStorage.setItem('id-phim', listMovieOffer[j].id);
+            localStorage.setItem('category-phim', listMovieOffer[j].theloai);
+            localStorage.setItem('year-phim', listMovieOffer[j].nam);
+            localStorage.setItem('type-phim', 1);
+            break;
+        }
+    }
+}
+
+function watchmovieright(j) {
+    var listItem = document.getElementsByClassName('item-title-right');
+    for (let i = 0; i < listItem.length; i++) {
         console.log(i);
         if (listMovieOffer[j].ten == listItem[i].innerText){
             localStorage.setItem('name-movie', listItem[i].innerText);
@@ -122,14 +134,13 @@ function watchmovie(j) {
     }
 }
 
-
 function listmovieright() {
     for (let i = 0; i <listMovieOffer.length; i++) {
         var menu = `
-        <li>
+        <li class="item-navbar-right">
             <img src="IMAGE/TrangChu/img-decu/${listMovieOffer[i].id}.webp" title="${listMovieOffer[i].ten}">
             <div>
-                <div onclick="watchmovie(${i})" >${listMovieOffer[i].ten}</div>
+                <div class="item-title-right" onclick="watchmovieright(${i})" >${listMovieOffer[i].ten}</div>
                 <p>Năm: ${listMovieOffer[i].nam}</p>
             </div>
         </li>`;

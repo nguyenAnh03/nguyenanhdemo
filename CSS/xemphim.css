@@ -1,39 +1,51 @@
 html {
     scroll-behavior: smooth;
 }
+
 body {
     background-color: black;
 }
-#title-xem-phim {
+
+#title-xem-phim,
+.title-gioithieu,
+.phimkhac {
     width: 100%;
     color: rgba(252, 185, 0, 1);
     text-transform: uppercase;
-    font-size: 15px;
+    font-size: 18px;
     font-family: fontnav;
     margin: 0 auto;
     margin-top: 10px;
 }
+
 .videophim {
     width: 100%;
     margin: 0 auto;
     border: 2px solid #333;
     margin-top: 10px;
     border-radius: 10px;
-    position:relative; 
-    overflow:hidden;
+    position: relative;
+    overflow: hidden;
     height: 200px;
 }
+
 .videophim iframe {
     width: 100%;
     height: 100%;
 }
-.change-sever{
+
+.change-sever {
     color: white;
     width: 100%;
     margin: 0 auto;
     margin-top: 10px;
     border: 1px solid rgb(186, 10, 10);
     padding: 10px;
+    border-radius: 5px;
+    position: sticky;
+}
+.change-sever *{
+    z-index: 10;
 }
 .text-sever {
     font-size: 15px;
@@ -41,6 +53,7 @@ body {
     font-style: italic;
     margin-bottom: 10px;
 }
+
 .title-sever {
     display: inline;
     margin: 10px;
@@ -49,71 +62,173 @@ body {
     padding: 10px 5px;
     border-radius: 5px;
     font-weight: bold;
-    
+
 }
+
 .change-sever button {
     margin-top: 10px;
-    padding: 5px 2.5px;
+    padding: 5px 5px;
     background-color: #333;
     border-radius: 5px;
     color: white;
+    border: none;
+    outline: none;
 }
-#changetap button:hover, .change-sever button:hover {
+
+.change-sever .nhacphim,
+.luuphim {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #333;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.change-sever .nhacphim:hover,
+.luuphim:hover {
+    background-image: linear-gradient(to right, #7b4397 0%, #dc2430 51%, #7b4397 100%);
+    color: white;
+    
+}
+
+@keyframes xoayvong {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+.change-sever .nhacphim>i {
+    animation: xoayvong 1s linear 0s infinite;
+    -webkit-animation: xoayvong 1s linear 0s infinite;
+}
+
+.change-sever button:hover {
     background-color: rgb(210, 205, 39);
     color: #333;
 }
+
 #changetap {
     width: 100%;
     margin: 0 auto;
     margin-top: 10px;
+
 }
+
+#changetap .border-button-change {
+    width: 75px;
+    height: 25px;
+    display: inline-block;
+    margin: 0px 4px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
 #changetap button {
     background-color: rgb(83, 67, 67);
-    margin: 0px 5px;
-    padding: 5px 15px;
+    width: 100%;
+    height: 100%;
     border-radius: 5px;
     color: aqua;
+    border: none;
+    outline: none;
 }
-#changetap button:visited {
+
+#changetap .border-button-change .xem-tap {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    line-height: 25px;
+    font-weight: bolder;
+    background-color: rgb(210, 205, 39);
+    color: black;
+    text-align: center;
+}
+
+#changetap .border-button-change:hover>button {
+    transform: translateY(-100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 1, 1);
+}
+
+#changetap .border-button-change:hover>.xem-tap {
+    transform: translateY(-100%);
+    transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
+}
+
+/* #changetap button:visited {
     background-color: rgb(210, 205, 39) ;
+} */
+
+.phimkhac {
+    margin-top: 20px;
+}
+
+section {
+    margin: 0 auto;
+}
+#tatden {
+    background-color: black;
+    z-index: 1;
 }
 @media (min-width: 450px) {
     .videophim {
         height: 300px;
     }
 }
+
 @media (min-width: 576px) {
     .videophim {
         height: 380px;
     }
 }
+
 @media (min-width: 992px) {
     .videophim {
         width: 80%;
     }
-    .videophim{
+
+    .videophim {
         height: 500px;
     }
-    .change-sever,#changetap {
+
+    .change-sever,
+    #changetap {
         width: 80%;
     }
-    #title-xem-phim {
+
+    #title-xem-phim,
+    .title-gioithieu,
+    .phimkhac {
         width: 80%;
         font-size: 20px;
     }
 }
+
 @media (min-width: 1200px) {
     .videophim {
         width: 70%;
     }
+
     .videophim {
         height: 50vh;
         min-height: 600px;
     }
-    .change-sever,#changetap {
+
+    .change-sever,
+    #changetap {
         width: 70%;
     }
-    #title-xem-phim {
+
+    #title-xem-phim,
+    .title-gioithieu,
+    .phimkhac {
         width: 70%;
         font-size: 25px;
     }

@@ -1,116 +1,212 @@
 var listUrlMovie = [
-    { id: 'thegioikhunglong', linkmovie: '4bk0auIF', tap: 0 },
-    { id: 'emvatrinh', linkmovie: '', tap: 0 },
-    { id: 'nguoikhoilua', linkmovie: 'wOJbsMi9', tap: 0 },
-    { id: 'satthunhantao', linkmovie: 'CZH8yA9F', tap: 0 },
-    { id: 'haokhichienbinh', linkmovie: '', tap: 0 },
-    { id: 'nhentrongmang', linkmovie: '89ZpG7WmO60', tap: 0 },
-    { id: 'bacsiduong', linkmovie: 'SyITiPtF', tap: 1 },
-    { id: 'nguoidanong', linkmovie: 'pt81CJcWZy8', tap: 0 },
-    { id: 'nguoikenhiemnamsan', linkmovie: 'h91TSTc_8_o', tap: 0 },
-    { id: 'contautitanic', linkmovie: '', tap: 0 },
-    { id: 'kieu', linkmovie: 'QJH2OinB4a4', tap: 0 },
-    { id: 'chimuoiba', linkmovie: 'Ncwkodt5dA4', tap: 0 },
-    { id: 'hoaraemyeuanhratnhieu', linkmovie: 'jRQrMy8ROeE', tap: 0 },
-    { id: 'thuyhautu', linkmovie: 'scvhgqqky', tap: 0 },
-    { id: 'thuamecondi', linkmovie: 'zJHg946nn', tap: 0 },
-    { id: 'thienngabongdem', linkmovie: 'oSaXQda5', tap: 1 },
-    { id: 'thuamecondi', linkmovie: 'bjWmZeL3', tap: 0 },
-    { id: 'tiectrangmau', linkmovie: 'ZcPb96BS', tap: 0 },
-    { id: 'matranhoisinh', linkmovie: 'WXHVBCEuy', tap: 0 },
-    { id: 'thuyquairunggomun', linkmovie: '08WNQAdR', tap: 0 },
-    { id: 'yeutinh', linkmovie: 'tbgl2NS2', tap: 0 }
+    {
+        id: 'thegioikhunglong', linkmovie: 'YruXzI', tap: 0
+    },
+    {
+        id: 'emvatrinh', linkmovie: 'TQZXY7', tap: 0
+    },
+    {
+        id: 'nguoikhoilua', linkmovie: 'EAuswE', tap: 0
+    },
+    {
+        id: 'satthunhantao', linkmovie: 'Vh1Dlf', tap: 0
+    },
+    {
+        id: 'haokhichienbinh', linkmovie: 'stUgTN', tap: 0
+    },
+    {
+        id: 'nhentrongmang', linkmovie: 'F7jX6L', tap: 0
+    },
+    {
+        id: 'bacsiduong', linkmovie: 'lGPQef', tap: 1
+    },
+    {
+        id: 'nguoidanong', linkmovie: 'vGydZj', tap: 0
+    },
+    {
+        id: 'nguoikenhiemnamsan', linkmovie: 'k99eSM', tap: 0
+    },
+    {
+        id: 'contautitanic', linkmovie: 'jG7wZh', tap: 0
+    },
+    {
+        id: 'kieu', linkmovie: 'jhJucW', tap: 0
+    },
+    {
+        id: 'chimuoiba', linkmovie: 'EeWYeE', tap: 0
+    },
+    {
+        id: 'hoaraemyeuanhratnhieu', linkmovie: 'chj9dl', tap: 1
+    },
+    {
+        id: 'thuyhautu', linkmovie: 'YGQ1JL', tap: 0
+    },
+    {
+        id: 'thuamecondi', linkmovie: 'OSYmN5', tap: 0
+    },
+    {
+        id: 'thienngabongdem', linkmovie: 'pah1eP', tap: 1
+    },
+    {
+        id: 'ghenong', linkmovie: 'VoNOmP', tap: 0
+    },
+    {
+        id: 'tiectrangmau', linkmovie: 'SulcG5', tap: 0
+    },
+    {
+        id: 'matranhoisinh', linkmovie: 'mAOpkd', tap: 0
+    },
+    {
+        id: 'thuyquairunggomun', linkmovie: 'r994x8', tap: 0
+    },
+    {
+        id: 'yeutinh', linkmovie: 'jwA8PK', tap: 0
+    }
 ];
 var listUrlsever = [
-    { id: 'thegioikhunglong', linkmovie: 'https://short.ink/XSK9-be7g' },
-    { id: 'emvatrinh', linkmovie: 'https://short.ink/3ktywJAf3' },
-    { id: 'nguoikhoilua', linkmovie: 'https://short.ink/pirBa0zn7' },
-    { id: 'satthunhantao', linkmovie: 'https://short.ink/KrVHUW7nK' },
-    { id: 'haokhichienbinh', linkmovie: '//ok.ru/videoembed/1747761760788' },
-    { id: 'nhentrongmang', linkmovie: 'https://short.ink/89ZpG7WmO60' },
-    { id: 'bacsiduong', linkmovie: 'https://short.ink/aU1vZvQiS' },
-    { id: 'nguoidanong', linkmovie: 'https://short.ink/pt81CJcWZy8' },
-    { id: 'nguoikenhiemnamsan', linkmovie: 'https://short.ink/h91TSTc_8_o' },
-    { id: 'contautitanic', linkmovie: 'https://short.ink/RyW7i9IyH' },
-    { id: 'kieu', linkmovie: 'https://short.ink/QJH2OinB4a4' },
-    { id: 'chimuoiba', linkmovie: 'https://short.ink/Ncwkodt5dA4' },
-    { id: 'hoaraemyeuanhratnhieu', linkmovie: 'https://short.ink/jRQrMy8ROeE' },
-    { id: 'thuyhautu', linkmovie: 'https://short.ink/scvhgqqky' },
-    { id: 'thuamecondi', linkmovie: 'https://short.ink/zJHg946nn' },
-    { id: 'thienngabongdem', linkmovie: 'https://short.ink/K9PGuByx7' },
-    { id: 'thuamecondi', linkmovie: 'https://short.ink/pt81CJcWZy8' },
-    { id: 'tiectrangmau', linkmovie: 'https://short.ink/Ft9LqdXpu' },
-    { id: 'matranhoisinh', linkmovie: 'https://short.ink/WXHVBCEuy' },
-    { id: 'thuyquairunggomun', linkmovie: 'https://short.ink/8ZarsluMU' },
-    { id: 'yeutinh', linkmovie: 'https://short.ink/e-6rgdQ49' }
+    { id: 'thegioikhunglong', linkmovie: 'nWvKWX' },
+    { id: 'emvatrinh', linkmovie: 'TQZXY7' },
+    { id: 'nguoikhoilua', linkmovie: 'TlyUB6' },
+    { id: 'satthunhantao', linkmovie: 'IU56DJ' },
+    { id: 'haokhichienbinh', linkmovie: 'fOMBfJ' },
+    { id: 'nhentrongmang', linkmovie: 'c0v0yc' },
+    { id: 'bacsiduong', linkmovie: 'HL04DJ' },
+    { id: 'nguoidanong', linkmovie: 'D3zdee' },
+    { id: 'nguoikenhiemnamsan', linkmovie: '6pyMIt' },
+    { id: 'contautitanic', linkmovie: 'jG7wZh' },
+    { id: 'kieu', linkmovie: 'jhJucW' },
+    { id: 'chimuoiba', linkmovie: 'DRVYdq' },
+    { id: 'hoaraemyeuanhratnhieu', linkmovie: 'chj9dl' },
+    { id: 'thuyhautu', linkmovie: 'Cy3v0z' },
+    { id: 'thuamecondi', linkmovie: 'Q4lNPp' },
+    { id: 'thienngabongdem', linkmovie: 'yo7OlC' },
+    { id: 'ghenong', linkmovie: 'VoNOmP' },
+    { id: 'tiectrangmau', linkmovie: 'uXLX8T' },
+    { id: 'matranhoisinh', linkmovie: 'BRLMer' },
+    { id: 'thuyquairunggomun', linkmovie: 'DlxXXv' },
+    { id: 'yeutinh', linkmovie: 'bcdoDx' }
 ];
+
+//Link các tập phim
 var listMovieTap = [
-    { id: 'thienngabongdem', tap: ['EfG7MirP', 'EfG7MirP', 'WDbAxTFP', 'OrNHySLW', 'BjcJmvQb', 'fQD8oNzh', 'oy54p8vx', 'udbz4fUm', 'TeyLaTwx', '3IQOR0Rs', '9AZEiAZU', 'hRv62K2M'] },
-    { id: 'bacsiduong', tap: ['SyITiPtF', 'DFW6lWxA', 'FB56AIOr', 'L9MUbhR0', 'FLZWT2Qf', 'hwKvDHaZ', 'LUhQaFEt', 'zMQ5B0PL', 'LzsmVQ3T'] }
+    {
+        id: 'thienngabongdem',
+        tap: [
+            'pah1eP', '3UM3Yq', 'nhpw15', 'Gd8BU2', 'N5Lxxe', 'D0sQrn', 'PhnIKv', 'LKrRhN', 'GYlxHK', 'EPsnsd', '4nScjD', 'DQccpP'
+        ]
+    },
+    {
+        id: 'bacsiduong',
+        tap: [
+            'lGPQef', 'Jrvzj9', 'vFEqJi', 'w0vLj7', 'KCz5pl', '6cffqV', 'Y20FqW', 'MkoZFp', 'Wd7B6p', 'VJnzds', 'MxuN1F', 'klIZDD', 'eCjHVG', 'P2m1jX', 'fcesYq', 'Buxic3', 'TR6Qho', 'gOty4N', 'YTVUrv', 'RlbupC', 'UDZx0U', 'sbsxi4', 'KL6KPH', 'cnVT7u', '19HG3L', 'eoFg9y', 'BJwOAw', 'ouyrbC', 'wOa3I8', 'xVDEJ3', 'ZwOLin', 'NMr1I2', 'drrW3O', 'HCiKNO', 'MofLFR', 'ebfrwQ'
+        ]
+    },
+    {
+        id: 'hoaraemyeuanhratnhieu',
+        tap: [
+            'chj9dl', '3yMjkf', 'qTr3XQ', 'Z0ZjPW', 'gOrJMV', 'XA640Y', 'UX2mhc', 'CZADT8', 'iWnMRV', 'kPKtcr', 'rExLh3', 'iDrCi2', 'O5G0z8', 'BNXIgR', '66Rr4m', 'Nev0Xf', 'LH9ykI', '48BzhG', '0Ni0Ck', 'XSVwQi', '6uvwKW', 'j5EW2h', 'zAJHu7', 'nCWWis'
+        ]
+    }
 ];
+// lưu vào secsionstorage tập 0;
+sessionStorage.setItem('tapphim', 0);
 var idphim = localStorage.getItem('id-phim');
 var indexphim = 0;
 for (let i = 0; i < listUrlMovie.length; i++) {
     if (listUrlMovie[i].id == idphim) {
         indexphim = i;
-        document.getElementById('video-movie').setAttribute('src', `https://cdn.jwplayer.com/players/${listUrlMovie[indexphim].linkmovie}-2o6TYCRV.html`);
-        if (listUrlMovie[i].linkmovie == '') {
-            setTimeout(() => {
-                document.getElementById('video-movie').setAttribute('src', `${listUrlsever[indexphim].linkmovie}`);
-                alert('Đang chuyển sever');
-                setTimeout(() => {
-                    location = '#video-movie';
-                }, 1000);
-            }, 1000);
-
-        }
+        document.getElementById('video-movie').setAttribute('src', `https://bom.so/${listUrlMovie[indexphim].linkmovie}`);
         break;
     }
 }
-console.log(listUrlMovie[indexphim].id);
+var changeTap = document.getElementById('changetap');
 for (let i = 0; i < listMovieTap.length; i++) {
-
     if (listUrlMovie[indexphim].tap != 0) {
         if (idphim == listMovieTap[i].id) {
             for (let j = 0; j < listMovieTap[i].tap.length; j++) {
-                document.getElementById('changetap').innerHTML += `<button onclick="changetapphim(${i},${j})" class="tap">Tập ${j + 1}</button>`;
+                changeTap.innerHTML += `<div class="border-button-change">
+                <button class="tap">Tập ${j + 1}</button>
+                <div onclick="changetapphim(${i},${j})" class="xem-tap">Xem</div>
+                </div>`;
             }
         }
     } else if (listUrlMovie[indexphim].tap == 0) {
-        document.getElementById('changetap').innerHTML = `<button onclick="fullmovie()" class="one">Full</button>`;
+        changeTap.innerHTML = `<div class="border-button-change">
+        <button class="one">Full</button>
+        <div onclick="fullmovie()" class="xem-tap">Xem</div>
+        </div>`;
+        sessionStorage.setItem('bophim', i);
         break;
     }
 }
-// document.addEventListener('contextmenu', event => event.preventDefault());
+document.addEventListener('contextmenu', event => event.preventDefault());
 document.getElementById('title-xem-phim').innerText = localStorage.getItem('name-movie');
-
 var listsever = document.getElementsByClassName('sever');
+// chạy hàm thay đổi sever
 sever1();
 sever2();
 function sever1() {
+    // Đổi sever 
     listsever[0].addEventListener('click', function () {
-        document.getElementById('video-movie').setAttribute('src', `${listUrlsever[indexphim].linkmovie}`);
-        console.log(`https://short.ink/${listUrlsever[indexphim].linkmovie}`);
+        document.getElementById('video-movie').setAttribute('src', `https://bom.so/${listUrlsever[indexphim].linkmovie}`);
         setTimeout(() => {
             location = '#video-movie'
         }, 100);
     });
 }
 function sever2() {
+    // Đổi sever 
     listsever[1].addEventListener('click', function () {
-        document.getElementById('video-movie').setAttribute('src', `https://cdn.jwplayer.com/players/${listUrlsever[indexphim].linkmovie}-2o6TYCRV.html`);
-        console.log(`https://short.ink/${listUrlsever[indexphim].linkmovie}`);
+        document.getElementById('video-movie').setAttribute('src', `https://bom.so/${listUrlMovie[indexphim].linkmovie}`);
         setTimeout(() => {
             location = '#video-movie'
         }, 100);
     });
 }
-
-
+//Thay đổi tập phim
 function changetapphim(i, j) {
-    document.getElementById('video-movie').setAttribute('src', `https://cdn.jwplayer.com/players/${listMovieTap[i].tap[j]}-2o6TYCRV.html`);
+    // chuyển đến để xem phim nếu bấm trùng tập đang xem
+    if (sessionStorage.getItem('bophim') == i && sessionStorage.getItem('tapphim') == j) {
+        location = '#video-movie';
+        return;
+    }
+    // Nếu khác tập đang xem thì đổi tập khác
+    document.getElementById('video-movie').setAttribute('src', `https://bom.so/${listMovieTap[i].tap[j]}`);
+    sessionStorage.setItem('bophim', i);
+    sessionStorage.setItem('tapphim', j);
     location = '#video-movie';
 }
+// chuyển đến để xem phim
 function fullmovie() {
     location = '#video-movie';
+}
+var checknenden = true;
+var video = document.getElementById('movie-movie');
+var changeSever = document.getElementsByClassName('change-sever')[0];
+var onofff = document.getElementById('off-on');
+var lighT = document.getElementById('light');
+function tatden(params) {
+    var nenden = document.getElementById('tatden');
+    if (checknenden) {
+        nenden.style.width = '100vw';
+        nenden.style.height = '100vh';
+        nenden.style.position = 'fixed';
+        nenden.style.top = '0px';
+        nenden.style.zIndex = '3';
+        video.style.zIndex = '10';
+        changeSever.style.zIndex = '10';
+        lighT.style.color = 'yellow';
+        location = '#movie-movie'
+        onofff.innerText = ' Bật đèn'
+        checknenden = !checknenden;
+    } else {
+        nenden.style.width = '0px';
+        nenden.style.height = '0px';
+        video.style.zIndex = '1';
+        changeSever.style.zIndex = '1';
+        lighT.style.color = 'white';
+        onofff.innerText = ' Tắt đèn'
+        location = '#movie-movie'
+        checknenden = !checknenden;
+    }
 }

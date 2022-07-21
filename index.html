@@ -8,6 +8,7 @@
     <link rel="icon" href="IMAGE/TrangChu/logo.png">
     <link rel="stylesheet" href="CSS/index.css">
     <title>Cinema</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"  />
 </head>
 
 <body>
@@ -28,9 +29,12 @@
                     <div class="title">Thế Giới Khủng Long: Lãnh Địa</div>
                     <div class="title day">Khởi chiếu: 15/08/2022</div>
                     <div class="login title">
-                        <a href="trangchu.html"><img
-                                src="IMAGE/TrangChu/img-login/login.webp"
-                                alt=""></a>
+                        <div class="login-div">
+                            Chào mừng bạn đến với Cinema
+                            <div class="chuyentoi" id="chuyentoicode">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -47,3 +51,8 @@
 </body>
 
 </html>
+<script>
+    document.getElementById('chuyentoicode').addEventListener('click', function(){
+        location = 'trangchu.html';
+    })
+</script>

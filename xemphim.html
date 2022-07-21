@@ -11,7 +11,6 @@
     <link rel="icon" href="IMAGE/TrangChu/img-login/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-
 </head>
 
 <body>
@@ -22,31 +21,32 @@
         <i class="fas fa-search header" id="icon-search" style="color: white;"></i>
         <i class="fas fa-bars header" id="icon-menu" style="color: white;"></i>
         <div class="header head" id="bodder-input">
-            <input type="text" name="" id="input" placeholder="Nhập phim muốn tìm">
+            <!-- <input type="text" name="" id="input" placeholder="Nhập phim muốn tìm"> -->
+            <script src="https://cse.google.com/cse.js?cx=9dfd0e27c1f44d6ff"></script>
+            <div class="gcse-search" id="input"></div>
         </div>
         <nav class="nav-primary header" id="nav-top">
             <ul class="nav-ul">
                 <li> <a href="trangchu.html">Trang chủ</a></li>
                 <li class="bodder-menucon">Thể loại
                     <ul id="menucon">
+                        <li><a href="reviewphim.html">Review phim</a></li>
                         <li><a href="">Chiếu rạp</a></li>
                         <li><a href="">Kinh dị</a></li>
                         <li><a href="">Tình cảm</a></li>
                         <li><a href="">Tâm lí</a></li>
                     </ul>
                 </li>
-                <li><a href="">Giới thiệu</a></li>
-                <li><a href="">Mua vé</a></li>
+                <li><a href="nhacphim.html">Nhạc phim</a></li>
+                <li><a href="">Thư viện</a></li>
             </ul>
         </nav>
     </header>
     <article class="content-xemphim">
         <div id="title-xem-phim"></div>
         <div class="videophim" id="movie-movie">
-            <iframe id="video-movie"
-                src="https://cdn.jwplayer.com/players/BeUCcY9q-2o6TYCRV.html" frameborder="0"
-                scrolling="auto" title="Người Khởi Lửa Full Hd - Firestarter Full Hd Vietsub Thuyết Minh"
-                style="position:absolute;" allowfullscreen>
+            <iframe id="video-movie" src="https://cdn.jwplayer.com/players/BeUCcY9q-2o6TYCRV.html" frameborder="0"
+                scrolling="auto" title="" style="position:absolute;" allowfullscreen>
             </iframe>
         </div>
         <div class="change-sever">
@@ -54,8 +54,94 @@
             <div class="title-sever">Đổi sever</div>
             <button class="sever">#severHTP</button>
             <button class="sever">#severLCR</button>
+            <div class="nhacphim" onclick="nghenhac()">
+                <i class="fa-solid fa-compact-disc spinner-border"></i>
+                Nghe nhạc phim
+            </div>
+            <div class="luuphim">
+                <i class="fa-solid fa-bookmark" id="savemovie"></i>
+                <span class="content-save">Lưu vào thư viện</span>
+            </div>
+            <button class="sever" onclick="tatden()"><i id="light" class="fa-solid fa-lightbulb"></i><span id="off-on">
+                    Tắt đèn</span></button>
         </div>
         <div id="changetap"></div>
+        <div class="title-gioithieu">Các phim khác</div>
+        <div class="container-form-comment">
+
+        </div>
+        <div class="phimkhac">
+            <div class="bodder-phimdecu" id="bodder-phimdecu-id">
+                <section class="item-phimdecu">
+                    <img onclick="watchmovie(0)" src="IMAGE/TrangChu/img-decu/thegioikhunglong.webp"
+                        title="Thế giới khủng long: Lãnh địa">
+                    <div class="title-phim watchmovie" onclick="watchmovie(0)">Thế giới khủng long: Lãnh địa</div>
+                    <div>Năm sản xuất: 2022</div>
+                    <div>Thể loại: <a href="">Hành động</a>, <a href="">Kinh dị</a></div>
+                </section>
+                <section class="item-phimdecu">
+                    <img onclick="watchmovie(1)" src="IMAGE/TrangChu/img-decu/thienngabongdem.webp"
+                        title="Thiên nga bóng đêm">
+                    <div class="title-phim watchmovie" onclick="watchmovie(1)">Thiên nga bóng đêm</div>
+                    <div>Năm sản xuất: 2022</div>
+                    <div>Thể loại: <a href="">Truyền hình</a>, <a href="">Tình cảm</a></div>
+                </section>
+                <section class="item-phimdecu">
+                    <img onclick="watchmovie(2)" src="IMAGE/TrangChu/img-decu/emvatrinh.webp" title="Em và Trịnh">
+                    <div class="title-phim watchmovie" onclick="watchmovie(2)">Em và Trịnh</div>
+                    <div>Năm sản xuất: 2022</div>
+                    <div>Thể loại: <a href="">Tâm lí - Tình cảm</a></div>
+                </section>
+                <section class="item-phimdecu">
+                    <img onclick="watchmovie(3)" src="IMAGE/TrangChu/img-decu/nguoikhoilua.webp" title="Người khởi lửa">
+                    <div class="title-phim watchmovie" onclick="watchmovie(3)">Người khởi lửa</div>
+                    <div>Năm sản xuất: 2022</div>
+                    <div>Thể loại: <a href="">Kinh dị</a>, <a href="">Giật gân</a></div>
+                </section>
+                <section class="item-phimdecu">
+                    <img onclick="watchmovie(4)" src="IMAGE/TrangChu/img-decu/satthunhantao.webp"
+                        title="Sát thủ nhân tạo 2: Mẫu vật còn lại">
+                    <div class="title-phim watchmovie" onclick="watchmovie(4)">Sát thủ nhân tạo 2: Mẫu vật còn lại</div>
+                    <div>Năm sản xuất: 2022</div>
+                    <div>Thể loại: <a href="">Kinh dị</a>, <a href="">Khoa học viễn tưởng</a></div>
+                </section>
+                <section class="item-phimdecu">
+                    <img onclick="watchmovie(5)" src="IMAGE/TrangChu/img-decu/haokhichienbinh.webp"
+                        title="Hào khí chiến binh">
+                    <div class="title-phim watchmovie" onclick="watchmovie(5)">Hào khí chiến binh</div>
+                    <div>Năm sản xuất: 2011</div>
+                    <div>Thể loại: <a href="">Kinh dị</a>, <a href="">Hành động</a></div>
+                </section>
+                <section class="item-phimdecu">
+                    <img onclick="watchmovie(6)" src="IMAGE/TrangChu/img-decu/nhentrongmang.webp"
+                        title="Nhện trong mạng">
+                    <div class="title-phim watchmovie" onclick="watchmovie(6)">Nhện trong mạng</div>
+                    <div>Năm sản xuất: 2019</div>
+                    <div>Thể loại: <a href="">Giật gân</a></div>
+                </section>
+                <section class="item-phimdecu">
+                    <img onclick="watchmovie(7)" src="IMAGE/TrangChu/img-decu/bacsiduong.webp" title="Bác sĩ Đường">
+                    <div class="title-phim watchmovie" onclick="watchmovie(7)">Bác sĩ Đường</div>
+                    <div>Năm sản xuất: 2022</div>
+                    <div>Thể loại: <a href="">Tâm lí - Tình cảm</a></div>
+                </section>
+                <section class="item-phimdecu">
+                    <img onclick="watchmovie(8)" src="IMAGE/TrangChu/img-decu/nguoidanong.webp" title="Người đàn ông">
+                    <div class="title-phim watchmovie" onclick="watchmovie(8)">Người đàn ông</div>
+                    <div>Năm sản xuất: 2022</div>
+                    <div>Thể loại: <a href="">Tâm Lý - Tình cảm</a>, <a href="">Khoa học viễn tưởng</a>, <a href="">Kinh
+                            dị - Ma</a></div>
+                </section>
+                <section class="item-phimdecu">
+                    <img onclick="watchmovie(9)" src="IMAGE/TrangChu/img-decu/nguoikenhiemnamsan.webp"
+                        title="Người kế nhiệm Namsan">
+                    <div class="title-phim watchmovie" onclick="watchmovie(9)">Người kế nhiệm Namsan</div>
+                    <div>Năm sản xuất: 2020</div>
+                    <div>Thể loại: <a href="">Tâm lí - Tình cảm</a></div>
+                </section>
+            </div>
+        </div>
+        <div id="tatden"></div>
     </article>
     <div class="before-footer"></div>
     <footer>
@@ -91,12 +177,11 @@
             </div>
         </div>
     </footer>
-
-
 </body>
 
 </html>
 <script src="JS/xemphim.js"></script>
+<script src="JS/phimdecu.js"></script>
 <script>
     $(document).ready(function () { /* sau khi html load và sẵn sàng*/
         $('#icon-menu').click(function () { /*thực hiện hàm click*/
@@ -109,5 +194,36 @@
             document.getElementById('nav-top').style.display = 'none';
         });
     })
-</script>
+    var save = document.getElementsByClassName('luuphim')[0];
+    var flag = true;
+    save.addEventListener('click', function () {
+        if (flag) {
+            document.getElementById('savemovie').style.color = 'orange';
+            document.getElementsByClassName('content-save')[0].innerText = 'Đã lưu';
+            flag = !flag;
+        } else {
+            document.getElementById('savemovie').style.color = 'white';
+            flag = !flag;
+            document.getElementsByClassName('content-save')[0].innerText = 'Lưu phim vào thư viện';
+        }
 
+    });
+    function nghenhac() {
+        location = 'nhacphim.html';
+    }
+    setTimeout(() => {
+        var input = document.getElementById('gsc-i-id1');
+        var bgd = document.getElementById('gsc-iw-id1');
+        input.setAttribute('placeholder', 'Nhập vào đây ...');
+        input.onfocus = function () {
+            bgd.style.background = 'none';
+        }
+        input.onblur = function () {
+            if (input.value == "") {
+                bgd.style.background = "url('/IMAGE/TrangChu/img-login/logo-tim-kiem.png') right no-repeat";
+            }
+        }
+    }, 500);
+</script>
+<script src="https://cdn.jsdelivr.net/mojs/latest/mo.min.js"></script>
+<script type="text/javascript" src="JS/clickchuot.js"></script>

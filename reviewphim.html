@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cinema - Trang Chủ</title>
+    <title>Cinema - Review phim</title>
     <link rel="stylesheet" href="CSS/trangchu.css">
-    <link rel="stylesheet" href="CSS/xemtrailer.css">
+    <link rel="stylesheet" href="CSS/reviewphim.css">
     <link rel="icon" href="IMAGE/TrangChu/img-login/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
@@ -43,44 +43,16 @@
             </ul>
         </nav>
     </header>
-    <article class="content-xemtrailer">
-        <div class="poster">
-            <div class="poster-child" id="poster-phim">
-                <div class="header-poster">
-                    <div class="content-poster">
-                        <div class="bodder-img-poster">
-                            <img id="img-poster" alt="poster-phim-Cinema">
-                        </div>
-                        <div class="content-text">
-                            <div class="title-poster-text" id="text-name"></div>
-                            <div class="content">
-                                <div class="quality-phim">Chất lượng: <span>Full HD</span></div>
-                                <div id="year-phim"></div>
-                                <div id="directo-phim"></div>
-                                <div id="country-phim"></div>
-                                <div id="category-phim"></div>
-                            </div>
-                            <button id="xemtrailer"><a href="#trailer">Xem giới thiệu</a></button>
-                            <button id="xemphim"><a href="xemphim.html#title-xem-phim">Xem phim</a></button>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="bottom-bodder-poster">
-                <div class="title-phim">Nội dung phim</div>
-                <div id="review-phim" class="review"></div> <span id='xemthem' onclick="Overflow()">Xem thêm</span>
-            </div>
-            <div class="title-phim trailer" id="trailer">Xem Trailer</div>
-            <div id="video-trailer">
-                <iframe id="url-trailer" width="942" height="530" src="https://www.youtube.com/embed/E5Lh8AAB3jw"
-                    title="Abcdefe" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-            </div>
+    <article class="content-reviewphim">
+        <div class="left-content-review" id="border-review">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/GY4vxujstlE?autoplay=1"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
         </div>
-
+        <div class="right-content-reivew">
+            <ul id="menu-right-review"></ul>
+        </div>
     </article>
     <div class="before-footer"></div>
     <footer>
@@ -121,8 +93,6 @@
 </body>
 
 </html>
-<script src="JS/xemtrailer.js"></script>
-<script src="JS/noidung.js"></script>
 
 <script>
     $(document).ready(function () { /* sau khi html load và sẵn sàng*/
@@ -135,24 +105,14 @@
             $('#bodder-input').slideToggle();
             document.getElementById('nav-top').style.display = 'none';
         });
-        $(window).resize(function () {
-            var width = $(window).width();
-            var imgphim = '';
-            var background = `IMAGE/TrangChu/img-xemphim/${localStorage.getItem('id-phim')}.webp`;
-            if (localStorage.getItem('type-phim') == 1) {
-                imgphim = `IMAGE/TrangChu/img-decu/${localStorage.getItem('id-phim')}.webp`;
-            } else {
-                imgphim = `IMAGE/TrangChu/img-capnhat/${localStorage.getItem('id-phim')}.webp`;
-            }
-            if (width < 992) {
-                document.getElementById('poster-phim').style.backgroundImage = `url(${imgphim})`;
-            } else {
-                document.getElementById('poster-phim').style.backgroundImage = `url(${background})`;
-            }
 
-            var video = document.getElementById('url-trailer');
-        });
+        var head = jQuery("iframe").contents().find("head");
+        var css = '<style type="text/css">' +
+            '.html5-video-player .ytp-chrome-top { display: none !important; }' +
+            '</style>';
+        jQuery(head).append(css);
     })
+
     setTimeout(() => {
         var input = document.getElementById('gsc-i-id1');
         var bgd = document.getElementById('gsc-iw-id1');
@@ -165,6 +125,5 @@
                 bgd.style.background = "url('/IMAGE/TrangChu/img-login/logo-tim-kiem.png') right no-repeat";
             }
         }
-    },500);
+    }, 500);
 </script>
-<script src="JS/trailer.js"></script>
