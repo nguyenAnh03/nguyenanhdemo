@@ -29,29 +29,37 @@
         <nav class="nav-primary header" id="nav-top">
             <ul class="nav-ul">
                 <li> <a href="trangchu.html">Trang chủ</a></li>
-                <li class="bodder-menucon">Thể loại
+                <li class="bodder-menucon focus-nav">Thể loại
                     <ul id="menucon">
                         <li><a href="reviewphim.html">Review phim</a></li>
-                        <li><a href="">Chiếu rạp</a></li>
-                        <li><a href="">Kinh dị</a></li>
-                        <li><a href="">Tình cảm</a></li>
-                        <li><a href="">Tâm lí</a></li>
+                        <li><a onclick="chieuRap()" href="theloai.html">Chiếu rạp</a></li>
+                        <li><a onclick="kinhDi()" href="theloai.html">Kinh dị</a></li>
+                        <li><a onclick="tinhCam()" href="theloai.html">Tình cảm</a></li>
+                        <li><a onclick="tamLy()" href="theloai.html">Tâm lí</a></li>
+                        <li><a onclick="hoatHinh()" href="theloai.html">Hoạt hình</a></li>
                     </ul>
                 </li>
                 <li><a href="nhacphim.html">Nhạc phim</a></li>
-                <li><a href="">Thư viện</a></li>
+                <li><a href="dangki.html">Thư viện</a></li>
             </ul>
         </nav>
     </header>
     <article class="content-reviewphim">
         <div class="left-content-review" id="border-review">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/GY4vxujstlE?autoplay=1"
-                title="YouTube video player" frameborder="0"
+            <i class="fa-solid fa-angles-left" onclick="prev()"></i>
+            <i class="fa-solid fa-angles-right" onclick="next()"></i>
+            <div class="content-video">
+                <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/lLCxSG7c8j0?autoplay=1&controls=0&rel=0"
+                title="YouTube video player" frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
+            </div>
+            
         </div>
         <div class="right-content-reivew">
-            <ul id="menu-right-review"></ul>
+            <ul id="menu-right-review">
+                
+            </ul>
         </div>
     </article>
     <div class="before-footer"></div>
@@ -127,3 +135,5 @@
         }
     }, 500);
 </script>
+<script src="JS/nav_theloai.js"></script>
+<script src="JS/reviewphim.js"></script>

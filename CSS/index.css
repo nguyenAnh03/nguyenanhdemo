@@ -146,7 +146,7 @@ main .container .banner-login {
 }
 .login-div:hover .chuyentoi {
     transform: translateX(0px);
-    transition: all 1s ease-in-out;
+    transition: all 0.5s ease-in-out;
     cursor: pointer;
 }
 

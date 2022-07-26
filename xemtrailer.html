@@ -32,14 +32,15 @@
                 <li class="bodder-menucon">Thể loại
                     <ul id="menucon">
                         <li><a href="reviewphim.html">Review phim</a></li>
-                        <li><a href="">Chiếu rạp</a></li>
-                        <li><a href="">Kinh dị</a></li>
-                        <li><a href="">Tình cảm</a></li>
-                        <li><a href="">Tâm lí</a></li>
+                        <li><a onclick="chieuRap()" href="theloai.html">Chiếu rạp</a></li>
+                        <li><a onclick="kinhDi()" href="theloai.html">Kinh dị</a></li>
+                        <li><a onclick="tinhCam()" href="theloai.html">Tình cảm</a></li>
+                        <li><a onclick="tamLy()" href="theloai.html">Tâm lí</a></li>
+                        <li><a onclick="hoatHinh()" href="theloai.html">Hoạt hình</a></li>
                     </ul>
                 </li>
                 <li><a href="nhacphim.html">Nhạc phim</a></li>
-                <li><a href="">Thư viện</a></li>
+                <li><a href="dangki.html">Thư viện</a></li>
             </ul>
         </nav>
     </header>
@@ -123,6 +124,7 @@
 </html>
 <script src="JS/xemtrailer.js"></script>
 <script src="JS/noidung.js"></script>
+<script src="JS/nav_theloai.js"></script>
 
 <script>
     $(document).ready(function () { /* sau khi html load và sẵn sàng*/
@@ -137,12 +139,12 @@
         });
         $(window).resize(function () {
             var width = $(window).width();
-            var imgphim = '';
-            var background = `IMAGE/TrangChu/img-xemphim/${localStorage.getItem('id-phim')}.webp`;
-            if (localStorage.getItem('type-phim') == 1) {
-                imgphim = `IMAGE/TrangChu/img-decu/${localStorage.getItem('id-phim')}.webp`;
-            } else {
-                imgphim = `IMAGE/TrangChu/img-capnhat/${localStorage.getItem('id-phim')}.webp`;
+            var imgphim = `https://bom.so/${localStorage.getItem('link-img')}`;
+            for (let i = 0; i < listDirecto.length; i++) {
+                if (localStorage.getItem('id-phim') == listDirecto[i].id) {
+                    background = `https://bom.so/${listDirecto[i].linkimg}`
+                    break;
+                }
             }
             if (width < 992) {
                 document.getElementById('poster-phim').style.backgroundImage = `url(${imgphim})`;
@@ -165,6 +167,6 @@
                 bgd.style.background = "url('/IMAGE/TrangChu/img-login/logo-tim-kiem.png') right no-repeat";
             }
         }
-    },500);
+    }, 1000);
 </script>
 <script src="JS/trailer.js"></script>

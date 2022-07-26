@@ -1,14 +1,14 @@
 var listmovie = [
-    { name: 'Tiệc trăng máu', daodien: 'Nguyễn Quang Dũng', quocgia: 'Việt Nam', nam: 2022, theloai: ['Tâm lí', 'Tình yêu', 'Chiếu rạp'], id: 'tiectrangmau'},
-    { name: 'Ma trận: Hồi sinh', daodien: 'Lana Wachowski', quocgia: 'Hoa Kỳ', nam: 2021, theloai: ['Hành động', 'Khoa học viễn tưởng'], id: 'matranhoisinh'},
-    { name: 'Thủy quái rừng gỗ mun', daodien: 'Hạng Thu Lương, Hạng Hà Sinh', quocgia: 'Trung Quốc', nam: 2021, theloai: ['Hành động', 'Ma-Kinh dị'], id: 'thuyquairunggomun' },
-    { name: 'Yêu tinh (2015)', daodien: 'Gil Kenan do David Lindsay-Abaire', quocgia: 'Hoa Kỳ', nam: 2015, theloai: ['Ma-kinh dị'], id: 'yeutinh' }
+    { name: 'Tiệc trăng máu', daodien: 'Nguyễn Quang Dũng', quocgia: 'Việt Nam', nam: 2022, theloai: ['Tâm lí', 'Tình yêu', 'Chiếu rạp'], id: 'tiectrangmau', linkimg: 'o49Xjm'},
+    { name: 'Ma trận: Hồi sinh', daodien: 'Lana Wachowski', quocgia: 'Hoa Kỳ', nam: 2021, theloai: ['Hành động', 'Khoa học viễn tưởng'], id: 'matranhoisinh', linkimg: 'oZbyvf'},
+    { name: 'Thủy quái rừng gỗ mun', daodien: 'Hạng Thu Lương, Hạng Hà Sinh', quocgia: 'Trung Quốc', nam: 2021, theloai: ['Hành động', 'Ma-Kinh dị'], id: 'thuyquairunggomun', linkimg: 'tU9RYW' },
+    { name: 'Yêu tinh (2015)', daodien: 'Gil Kenan do David Lindsay-Abaire', quocgia: 'Hoa Kỳ', nam: 2015, theloai: ['Ma-kinh dị'], id: 'yeutinh', linkimg: '8LJZae' }
 ];
 
 for (let index = 0; index < listmovie.length; index++) {
     var content = ` <section class="item-phimcapnhat">
                         <div class="poster-phim">
-                            <img class="poster" src="IMAGE/TrangChu/img-capnhat/${listmovie[index].id}.webp" alt="poster phim" title="${listmovie[index].name}">
+                            <img class="poster" src="https://bom.so/${listmovie[index].linkimg}" alt="poster phim" title="${listmovie[index].name}">
                             <div class="button">
                                 <button class="button-xem" onclick="gotomovie(${index})" >Xem phim</button>
                                 <button class="button-gt" onclick="gototrailer(${index})">Giới thiệu</button>
@@ -40,11 +40,10 @@ function watchmoviecapnhat(j) {
         console.log(i);
         if (listmovie[j].name == listItem[i].innerText){
             localStorage.setItem('name-movie', listItem[i].innerText);
-            
+            localStorage.setItem('link-img', listmovie[j].linkimg);
             localStorage.setItem('id-phim', listmovie[j].id);
             localStorage.setItem('category-phim', listmovie[j].theloai);
             localStorage.setItem('year-phim', listmovie[j].nam);
-            localStorage.setItem('type-phim', 0);
             break;
         }
     }

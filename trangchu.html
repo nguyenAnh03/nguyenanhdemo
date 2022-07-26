@@ -19,9 +19,19 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 
+
 </head>
 
 <body>
+    <div class="loading" id="loadding">
+        <img src="IMAGE/TrangChu/img-login/ezgif-2-5468d589f84e.gif"> <br>
+        <img class="imgchaomung" src="IMAGE/TrangChu/img-login/logo.png" alt="">
+    </div>
+    <script>
+        if(sessionStorage.getItem('hienloadding') == 1) {
+        document.getElementById('loadding').style.display = 'none';
+    }
+    </script>
     <header>
         <div class="header logo">
             <img src="IMAGE/TrangChu/img-login/logo.png" alt="">
@@ -35,18 +45,19 @@
         </div>
         <nav class="nav-primary header" id="nav-top">
             <ul class="nav-ul">
-                <li> <a href="">Trang chủ</a></li>
+                <li> <a href="" class="focus-nav">Trang chủ</a></li>
                 <li class="bodder-menucon">Thể loại
                     <ul id="menucon">
                         <li><a href="reviewphim.html">Review phim</a></li>
-                        <li><a href="">Chiếu rạp</a></li>
-                        <li><a href="">Kinh dị</a></li>
-                        <li><a href="">Tình cảm</a></li>
-                        <li><a href="">Tâm lí</a></li>
+                        <li><a onclick="chieuRap()" href="theloai.html">Chiếu rạp</a></li>
+                        <li><a onclick="kinhDi()" href="theloai.html">Kinh dị</a></li>
+                        <li><a onclick="tinhCam()" href="theloai.html">Tình cảm</a></li>
+                        <li><a onclick="tamLy()" href="theloai.html">Tâm lí</a></li>
+                        <li><a onclick="hoatHinh()" href="theloai.html">Hoạt hình</a></li>
                     </ul>
                 </li>
                 <li><a href="nhacphim.html">Nhạc phim</a></li>
-                <li><a href="">Thư viện</a></li>
+                <li><a href="dangki.html">Thư viện</a></li>
             </ul>
         </nav>
     </header>
@@ -67,7 +78,7 @@
                         </ol>
                         <div class="carousel-inner">
                             <div class="item active" style="height: 279.062px; width: 100%; ">
-                                <img src="IMAGE/TrangChu/img-login/banner_1.webp" alt="image-1"
+                                <img src="IMAGE/TrangChu/img-login/banner_6.jpg" alt="image-1"
                                     style="width:100%; overflow: hidden; position: absolute; top: 0px;">
                             </div>
                             <div class="item" style="height: 279.062px;">
@@ -76,7 +87,7 @@
                             </div>
                             <div class="item" style="height: 279.062px;">
                                 <img src="IMAGE/TrangChu/img-login/banner_3.webp" alt="image-3"
-                                    style="width:100%;  overflow: hidden; position: absolute; top: 0px; object-fit: cover;">
+                                    style="width:100%;  overflow: hidden; position: absolute; top: -100px; object-fit: cover;">
 
                             </div>
                             <div class="item" style="height: 279.062px;">
@@ -86,11 +97,11 @@
                             </div>
                             <div class="item" style="height: 279.062px;">
                                 <img src="IMAGE/TrangChu/img-login/banner_5.jpg" alt="image-5"
-                                    style="width:100%;  overflow: hidden; position: absolute; top: 0px; object-fit: cover;">
+                                    style="width:100%;  overflow: hidden; position: absolute; top: -10px; object-fit: cover;">
 
                             </div>
                             <div class="item" style="height: 279.062px;">
-                                <img src="IMAGE/TrangChu/img-login/banner_6.jpg" alt="image-5"
+                                <img src="IMAGE/TrangChu/img-login/banner_1.webp" alt="image-5"
                                     style="width:100%;  overflow: hidden; position: absolute; top: 0px; object-fit: cover;">
 
                             </div>
@@ -175,11 +186,11 @@
             </div>
         </div>
     </footer>
+
 </body>
 
 </html>
 <script>
-    checkDisabled(sessionStorage.getItem('index'));
     $(document).ready(function () { /* sau khi html load và sẵn sàng*/
         $('#icon-menu').click(function () { /*thực hiện hàm click*/
             $('nav').slideToggle(); /*xổ nav xuống khi bấm #icon-menu*/
@@ -197,6 +208,7 @@
         'Banner_Phim.jpg'
     ]
     var index = 0;
+
     setTimeout(() => {
         var input = document.getElementById('gsc-i-id1');
         var bgd = document.getElementById('gsc-iw-id1');
@@ -210,10 +222,16 @@
             }
         }
     }, 500);
+    setTimeout(() => {
+        document.getElementById('loadding').style.display = 'none';
+        sessionStorage.setItem('hienloadding', 1);
+    }, 2000); 
 
 </script>
+<script src="JS/nav_theloai.js"></script>
 <script src="JS/phimmoicapnhat.js"></script>
 <script src="JS/phimdecu.js"></script>
 <script>
     listmovieright();
+    checkDisabled(sessionStorage.getItem('index'));
 </script>

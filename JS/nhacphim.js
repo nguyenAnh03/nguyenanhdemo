@@ -1,4 +1,5 @@
 const audio = document.getElementById('music');
+var srcMusic = document.getElementById('srcMusic');
 var playMusic = document.getElementById('play-pause');
 var flag = true;
 var indexList = -1;
@@ -175,42 +176,42 @@ function banner() {
 }
 // mảng bài hát mặc định
 var listmusic = [
-    { id: 'xemnhutachuatung', link: 'qls6Xc', name: 'Xem Như Ta Chưa Từng (OST Ai Là Người Thứ Ba?)', singer: 'Lệ Quyên' },
-    { id: 'cochangtraivietlencay', link: 'cAoks9', name: 'Có Chàng Trai Viết Lên Cây (Mắt Biếc OST)', singer: 'Anh Tú, Bùi Công Nam' },
-    { id: 'khongtiecthoigian', link: 'nutsGf', name: 'Không Tiếc Thời Gian (不惜时光)', singer: 'Trương Lương Dĩnh' },
-    { id: 'hoabingan', link: 'QO8Te0', name: 'Hoa Bỉ Ngạn / 彼岸花 (電視劇《問天錄》主題曲)', singer: '周深 / Châu Thâm' },
-    { id: 'canyouseemyheart', link: '73h6sI', name: 'Can You See My Heart', singer: 'Heize' },
-    { id: 'ngaychuagiongbao', link: 'ah6uwl', name: 'Ngày Chưa Giông Bão', singer: 'Bùi Lan Hương' },
-    { id: 'anhdidi', link: 'XyfWLh', name: 'Anh Đi Đi', singer: 'Hương Giang, Erik' },
-    { id: 'chotoimotvedituoitho', link: 'LsdoMv', name: 'Cho Tôi Xin Một Vé Đi Tuổi Thơ', singer: 'Linkly' },
-    { id: 'lonroiconkhocnhe', link: '6IkjvR', name: 'Lớn Rồi Còn Khóc Nhè', singer: 'Trúc Nhân' },
-    { id: 'rucrothangnam', link: 'pGtjSR', name: 'Rực Rỡ Tháng Năm (Tháng Năm Rực Rỡ OST)', singer: 'Mỹ Tâm' }
+    { id: 'xemnhutachuatung', name: 'Xem Như Ta Chưa Từng (OST Ai Là Người Thứ Ba?)', singer: 'Lệ Quyên' },
+    { id: 'cochangtraivietlencay', name: 'Có Chàng Trai Viết Lên Cây (Mắt Biếc OST)', singer: 'Anh Tú, Bùi Công Nam' },
+    { id: 'khongtiecthoigian',  name: 'Không Tiếc Thời Gian (不惜时光)', singer: 'Trương Lương Dĩnh' },
+    { id: 'hoabingan',  name: 'Hoa Bỉ Ngạn / 彼岸花 (電視劇《問天錄》主題曲)', singer: '周深 / Châu Thâm' },
+    { id: 'canyouseemyheart', name: 'Can You See My Heart', singer: 'Heize' },
+    { id: 'ngaychuagiongbao',  name: 'Ngày Chưa Giông Bão', singer: 'Bùi Lan Hương' },
+    { id: 'anhdidi',  name: 'Anh Đi Đi', singer: 'Hương Giang, Erik' },
+    { id: 'chotoixinmotvedituoitho',  name: 'Cho Tôi Xin Một Vé Đi Tuổi Thơ', singer: 'Linkly' },
+    { id: 'lonroiconkhocnhe', name: 'Lớn Rồi Còn Khóc Nhè', singer: 'Trúc Nhân' },
+    { id: 'rucrothangnam', name: 'Rực Rỡ Tháng Năm (Tháng Năm Rực Rỡ OST)', singer: 'Mỹ Tâm' }
 ]
 var listTime = [listmusic.length];
 postToList();
 // post bài hát mặc định lên trên list
 function postToList() {
     var temp = listmusic;
-    for (let i = 0; i < listmusic.length; i++) {
+    for (let i = 0; i < temp.length; i++) {
         var list = `<li class="item-list" onclick="changeSongToList(${i}); nextMusic()">
                         <div class="img-item">
-                            <img src="IMAGE/NhacPhim/${listmusic[i].id}.webp">
+                            <img src="IMAGE/NhacPhim/${temp[i].id}.webp">
                         </div>
                         <div class="name-and-singer">
                             <div class="title-item">
-                                ${listmusic[i].name}
+                                ${temp[i].name}
                             </div>
                             <div class="singer">
-                                ${listmusic[i].singer}
+                                ${temp[i].singer}
                             </div>
                         </div>
                         
                         <div class="title-item-trans">
-                            ${listmusic[i].name}
+                            ${temp[i].name}
                         </div>
                         <div>
-                            <audio id="music-hide${i}">
-                                <source src="https://bom.so/${listmusic[i].link}">
+                            <audio id="music-hide${i}" preload="auto">
+                                <source src="MEDIA/${temp[i].id}.mp3" type="audio/mp3">
                             </audio>
                             <div class="time-item-trans">
                                 
@@ -300,12 +301,12 @@ function changeSong(a, b) {
     if (indexList == -1) {
         indexList = b.length - 1;
     }
-    if (a != b.length - 1) {
+    // if (a != b.length - 1) {
         document.getElementsByClassName('item-list')[indexList].style.backgroundColor = "#170f23";
-    }
+    // }
     document.getElementsByClassName('item-list')[a].style.backgroundColor = "#333";
     indexList = a;
-    audio.setAttribute('src', `https://bom.so/${b[indexList].link}`);
+    audio.setAttribute('src', `MEDIA/${b[indexList].id}.mp3`);
     audio.play();
     audioAnimation.play();
     document.getElementById('title-Music').innerText = b[indexList].name;
@@ -334,36 +335,48 @@ function setProgress(e) {
 var album = [
     {
         name: 'Nhạc Phim Hàn Quốc', id: 'phimhauduemattroi', listMusicAlbum: [
-            { id: 'spring', link: 'V2THSt', name: 'Spring', singer: 'Park Bom, Dara' },
-            { id: 'withoutyou', link: 'MMtR5P', name: 'Without You (Miley Cyrus Remix)', singer: 'The Kid LAROI, Miley Cyrus' },
-            { id: 'moonlight', link: 'fqTs0G', name: 'Moonlight Drawn By Clouds', singer: 'Gummy' },
-            { id: 'imissyou', link: 'KLOe24', name: 'I Miss You', singer: 'Kim Bum Soo' },
-            { id: 'forever', link: 'kXlfD8', name: 'Forever', singer: 'Ahn Jae-wook' },
-            { id: 'sweetdream', link: '2h7tbv', name: 'Sweet Dream', singer: 'Jang Na Ra' },
+            { id: 'spring', name: 'Spring', singer: 'Park Bom, Dara' },
+            { id: 'withoutyou', name: 'Without You (Miley Cyrus Remix)', singer: 'The Kid LAROI, Miley Cyrus' },
+            { id: 'moonlight', name: 'Moonlight Drawn By Clouds', singer: 'Gummy' },
+            { id: 'imissyou', name: 'I Miss You', singer: 'Kim Bum Soo' },
+            { id: 'forever', name: 'Forever', singer: 'Ahn Jae-wook' },
+            { id: 'sweetdream', name: 'Sweet Dream', singer: 'Jang Na Ra' },
         ]
     },
     {
         name: 'Nhạc Phim Hoa Ngữ', id: 'phimtrunghoa', listMusicAlbum: [
-            { id: 'xemnhutachuatung', link: 'qls6Xc', name: 'Xem Như Ta Chưa Từng (OST Ai Là Người Thứ Ba?)', singer: 'Lệ Quyên' },
-            { id: 'xemnhutachuatung', link: 'qls6Xc', name: 'Xem Như Ta Chưa Từng (OST Ai Là Người Thứ Ba?)', singer: 'Lệ Quyên' },
-            { id: 'xemnhutachuatung', link: 'qls6Xc', name: 'Xem Như Ta Chưa Từng (OST Ai Là Người Thứ Ba?)', singer: 'Lệ Quyên' },
+            { id: 'henuocboconganh', name: 'Hẹn Ước Bồ Công Anh', singer: 'Vương Tuấn Khải (TFBoys), Vương Nguyên (TFBoys)' },
+            { id: 'khoangcach', name: 'Khoảng Cách / 空白格 (Live)', singer: 'Vương Nguyên (TFBoys)' },
+            { id: 'nguocdongthoigianchayvephiaanh', name: 'Ngược Dòng Thời Gian Chạy Về Phía Anh', singer: 'Angela Zhang' },
+            { id: 'khongtiecthoigian', name: 'Không Tiếc Thời Gian (不惜时光)', singer: 'Trương Lương Dĩnh' },
+
         ]
     },
     {
         name: 'Nhạc Phim Âu Mỹ', id: 'phimaumy', listMusicAlbum: [
-            { id: 'xemnhutachuatung', link: 'qls6Xc', name: 'Xem Như Ta Chưa Từng (OST Ai Là Người Thứ Ba?)', singer: 'Lệ Quyên' },
-            { id: 'xemnhutachuatung', link: 'qls6Xc', name: 'Xem Như Ta Chưa Từng (OST Ai Là Người Thứ Ba?)', singer: 'Lệ Quyên' },
+            { id: 'xemnhutachuatung', name: 'Xem Như Ta Chưa Từng (OST Ai Là Người Thứ Ba?)', singer: 'Lệ Quyên' },
+            { id: 'xemnhutachuatung', name: 'Xem Như Ta Chưa Từng (OST Ai Là Người Thứ Ba?)', singer: 'Lệ Quyên' },
+            { id: 'khongtiecthoigian', name: 'Không Tiếc Thời Gian (不惜时光)', singer: 'Trương Lương Dĩnh' },
+            { id: 'khongtiecthoigian', name: 'Không Tiếc Thời Gian (不惜时光)', singer: 'Trương Lương Dĩnh' },
+
         ]
     },
     {
         name: 'Nhạc Phim Việt Nam', id: 'phimvietnam', listMusicAlbum: [
-            { id: 'xemnhutachuatung', link: 'qls6Xc', name: 'Xem Như Ta Chưa Từng (OST Ai Là Người Thứ Ba?)', singer: 'Lệ Quyên' },
+            { id: 'xemnhutachuatung', name: 'Xem Như Ta Chưa Từng (OST Ai Là Người Thứ Ba?)', singer: 'Lệ Quyên' },
+            { id: 'khongtiecthoigian', name: 'Không Tiếc Thời Gian (不惜时光)', singer: 'Trương Lương Dĩnh' },
+            { id: 'khongtiecthoigian', name: 'Không Tiếc Thời Gian (不惜时光)', singer: 'Trương Lương Dĩnh' },
+            { id: 'khongtiecthoigian', name: 'Không Tiếc Thời Gian (不惜时光)', singer: 'Trương Lương Dĩnh' },
+
         ]
     },
     {
         name: 'Nhạc Phim Anime', id: 'anime', listMusicAlbum: [
-            { id: 'khongtiecthoigian', link: 'nutsGf', name: 'Không Tiếc Thời Gian (不惜时光)', singer: 'Trương Lương Dĩnh' },
-            { id: 'khongtiecthoigian', link: 'nutsGf', name: 'Không Tiếc Thời Gian (不惜时光)', singer: 'Trương Lương Dĩnh' },
+            { id: 'khongtiecthoigian', name: 'Không Tiếc Thời Gian (不惜时光)', singer: 'Trương Lương Dĩnh' },
+            { id: 'khongtiecthoigian', name: 'Không Tiếc Thời Gian (不惜时光)', singer: 'Trương Lương Dĩnh' },
+            { id: 'khongtiecthoigian', name: 'Không Tiếc Thời Gian (不惜时光)', singer: 'Trương Lương Dĩnh' },
+            { id: 'khongtiecthoigian', name: 'Không Tiếc Thời Gian (不惜时光)', singer: 'Trương Lương Dĩnh' },
+
         ]
     },
     {
@@ -412,15 +425,19 @@ function postItemAlbum() {
                                     ${album[i].listMusicAlbum[j].name}
                                 </div>
                                 <div>
-                                    <audio id="music-hide${j}">
-                                        <source src="https://bom.so/${album[i].listMusicAlbum[j].link}">
-                                    </audio>
-                                    <div class="time-item-trans">
+                                <audio id="music-hide${j}" preload="auto">
+                                    <source src="MEDIA/${album[i].listMusicAlbum[j].id}.mp3" type="audio/mp3">
+                                </audio> 
+                                <div class="time-item-trans">
                                         
                                     </div>
                                 </div>
                             </li>`
                 document.getElementById('list-menu').innerHTML += list;
+                document.getElementById('imgbanner1').setAttribute('src',`IMAGE/NhacPhim/${album[i].listMusicAlbum[0].id}.webp`);
+                document.getElementById('imgbanner2').setAttribute('src',`IMAGE/NhacPhim/${album[i].listMusicAlbum[1].id}.webp`);
+                document.getElementById('imgbanner3').setAttribute('src',`IMAGE/NhacPhim/${album[i].listMusicAlbum[2].id}.webp`);
+                document.getElementById('imgbanner4').setAttribute('src',`IMAGE/NhacPhim/${album[i].listMusicAlbum[3].id}.webp`);
             }
             for (let j = 0; j < album[i].listMusicAlbum.length; j++) {
                 var time = document.getElementById(`music-hide${j}`);
@@ -447,11 +464,11 @@ function popupDialog() {
             pop.style.display = 'none';
         }, 1000);
     });
-    console.log('Helo');
+    // console.log('Helo');
 }
-setTimeout(() => {
-    console.clear();
-}, 5000);
+// setTimeout(() => {
+//     console.clear();
+// }, 5000);
 var intervalRepeat;
 var intervalRandom;
 function RandomSong() {

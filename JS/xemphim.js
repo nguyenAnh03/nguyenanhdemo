@@ -42,7 +42,7 @@ var listUrlMovie = [
         id: 'thuyhautu', linkmovie: 'YGQ1JL', tap: 0
     },
     {
-        id: 'thuamecondi', linkmovie: 'OSYmN5', tap: 0
+        id: 'thuamecondi', linkmovie: 'kN31Nv', tap: 0
     },
     {
         id: 'thienngabongdem', linkmovie: 'pah1eP', tap: 1
@@ -61,7 +61,32 @@ var listUrlMovie = [
     },
     {
         id: 'yeutinh', linkmovie: 'jwA8PK', tap: 0
-    }
+    },
+    {
+        id: 'gaudobienhinh', linkmovie: 'xhVFD2', tap: 0
+    },
+    {
+        id: 'anhemnhagau', linkmovie: 'HxmpD9', tap: 0
+    },
+    { id: 'angrybird', linkmovie: 'IizXPE', tap: 0},
+    { id: 'kungfupanda', linkmovie:'DE9NY7' , tap: 1},
+    { id: 'dainaotaydu', linkmovie: 'hmuxfj', tap: 0},
+    { id: 'phamnhantutien', linkmovie:'zOsjJX', tap: 1},
+    { id: 'liethoakieusau', linkmovie: 'YzQya5', tap: 0},
+    { id: 'thogarakhobau', linkmovie: 'IizXPE', tap: 0},
+    { id: 'canhsatvutru', linkmovie: 'gtsYnW', tap: 0},
+    { id: 'linhhondoixac', linkmovie: 'ZnCPuK', tap: 0},
+    { id: 'hoiquaisieucap', linkmovie: 'ZnCPuK', tap: 0},
+    { id: 'thegioikyao', linkmovie: 'EUngWT', tap: 0},
+    { id: 'banhquythu', linkmovie: 'EjZTX6', tap: 0},
+    { id: 'vuahaitac', linkmovie: 'Tpi1iV', tap: 0},
+    { id: 'kedanhcapmattrang', linkmovie: 'Tm3SgL', tap: 0},
+
+
+
+
+
+
 ];
 var listUrlsever = [
     { id: 'thegioikhunglong', linkmovie: 'nWvKWX' },
@@ -105,6 +130,16 @@ var listMovieTap = [
         id: 'hoaraemyeuanhratnhieu',
         tap: [
             'chj9dl', '3yMjkf', 'qTr3XQ', 'Z0ZjPW', 'gOrJMV', 'XA640Y', 'UX2mhc', 'CZADT8', 'iWnMRV', 'kPKtcr', 'rExLh3', 'iDrCi2', 'O5G0z8', 'BNXIgR', '66Rr4m', 'Nev0Xf', 'LH9ykI', '48BzhG', '0Ni0Ck', 'XSVwQi', '6uvwKW', 'j5EW2h', 'zAJHu7', 'nCWWis'
+        ]
+    },
+    { 
+        id: 'kungfupanda',
+        tap: ['DE9NY7', 'JXvAEc', 'xRUV2K']
+    },
+    {
+        id: 'phamnhantutien',
+        tap: [
+            'zOsjJX', 'CFo0YC', 'CFo0YC', 'CFo0YC', 'CFo0YC', 'CFo0YC'
         ]
     }
 ];
@@ -185,7 +220,7 @@ var video = document.getElementById('movie-movie');
 var changeSever = document.getElementsByClassName('change-sever')[0];
 var onofff = document.getElementById('off-on');
 var lighT = document.getElementById('light');
-function tatden(params) {
+function tatden() {
     var nenden = document.getElementById('tatden');
     if (checknenden) {
         nenden.style.width = '100vw';

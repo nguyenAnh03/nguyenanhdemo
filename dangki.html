@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema - Đăng kí</title>
+    <link rel="stylesheet" href="CSS/dangki.css">
+    <link rel="icon" href="IMAGE/TrangChu/img-login/logo.png">
+</head>
+
+<body>
+
+    <article class="sipup">
+        <div class="nen">
+            <div class="logo">
+                <img src="IMAGE/TrangChu/img-login/logo.png" alt="">
+            </div>
+        </div>
+        <form action="action_page.php" style="border:1px solid #ccc">
+            <div class="container">
+                <h1>Đăng Nhập Với Cinema</h1>
+                <p>Vui lòng điền vào biểu mẫu này để tạo tài khoản hoặc bạn có thể <a class="login" href="dangnhap.html">ĐĂNG NHẬP</a>. </p>
+                <hr>
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Nhập Email" name="email" required>
+
+                <label for="psw"><b>Mật khẩu</b></label>
+                <input type="password" placeholder="Nhập mật khẩu" name="psw" required>
+
+                <label for="psw-repeat"><b>Nhập lại mật khẩu</b></label>
+                <input type="password" placeholder="Nhập lại mật khẩu" name="psw-repeat" required>
+
+                <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                </label>
+
+                <p>Khi bạn bấm đăng kí là bạn đồng ý với <a href="#"
+                    style="color:dodgerblue">điều khoản</a> của chúng tôi.</p>
+
+                <div class="clearfix">
+                    <button type="button" id="huy" class="cancelbtn">Hủy</button>
+                    <button type="submit" class="signupbtn">Đăng kí</button>
+                </div>
+            </div>
+        </form>
+    </article>
+
+</body>
+
+</html>
+<script>
+    document.getElementById('huy').addEventListener('click', function(){
+        location = 'index.html';
+    })
+</script>
+<script src="https://uhchat.net/code.php?f=094740"></script>

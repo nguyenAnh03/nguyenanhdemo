@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cinema - Review phim</title>
+    <title>Cinema - Nhạc phim</title>
     <link rel="stylesheet" href="CSS/trangchu.css">
     <link rel="stylesheet" href="CSS/nhacphim.css">
     <link rel="icon" href="IMAGE/TrangChu/img-login/logo.png">
@@ -33,14 +33,15 @@
                 <li class="bodder-menucon">Thể loại
                     <ul id="menucon">
                         <li><a href="reviewphim.html">Review phim</a></li>
-                        <li><a href="">Chiếu rạp</a></li>
-                        <li><a href="">Kinh dị</a></li>
-                        <li><a href="">Tình cảm</a></li>
-                        <li><a href="">Tâm lí</a></li>
+                        <li><a onclick="chieuRap()" href="theloai.html">Chiếu rạp</a></li>
+                        <li><a onclick="kinhDi()" href="theloai.html">Kinh dị</a></li>
+                        <li><a onclick="tinhCam()" href="theloai.html">Tình cảm</a></li>
+                        <li><a onclick="tamLy()" href="theloai.html">Tâm lí</a></li>
+                        <li><a onclick="hoatHinh()" href="theloai.html">Hoạt hình</a></li>
                     </ul>
                 </li>
-                <li><a href="">Nhạc phim</a></li>
-                <li><a href="">Thư viện</a></li>
+                <li><a href="" class="focus-nav">Nhạc phim</a></li>
+                <li><a href="dangki.html">Thư viện</a></li>
             </ul>
         </nav>
     </header>
@@ -48,16 +49,16 @@
         <div class="list-and-banner">
             <div class="banner-music">
                 <div class="item-banner last">
-                    <img src="IMAGE/NhacPhim/banner_1.webp">
+                    <img src="IMAGE/NhacPhim/banner_1.webp" id="imgbanner1">
                 </div>
                 <div class="item-banner prev">
-                    <img src="IMAGE/NhacPhim/banner_2.webp">
+                    <img src="IMAGE/NhacPhim/banner_2.webp" id="imgbanner2">
                 </div>
                 <div class="item-banner next">
-                    <img src="IMAGE/NhacPhim/banner_3.webp">
+                    <img src="IMAGE/NhacPhim/banner_3.webp" id="imgbanner3">
                 </div>
                 <div class="item-banner active">
-                    <img src="IMAGE/NhacPhim/banner_4.webp">
+                    <img src="IMAGE/NhacPhim/banner_4.webp" id="imgbanner4">
                 </div>
             </div>
             <div class="list-music">
@@ -93,19 +94,11 @@
                     </div>
                 </div>
             </div>
-            <audio id="music">
-                <source src="https://bom.so/pMl5bN">
+            <audio id="music" preload="auto">
+                <source id="srcMusic" src="https://bom.so/pMl5bN">
             </audio>
         </div>
         <div class="list-play" id="albums">
-            <!-- <div class="group-album">
-                <div class="img-album">
-                    <img class="img-play" src="" alt="">
-                </div>
-                <div class="icon-play">
-
-                </div>
-            </div> -->
         </div>
     </article>
     <div class="bottom-container"></div>
@@ -159,6 +152,7 @@
 
 </html>
 <script src="JS/nhacphim.js"></script>
+<script src="JS/nav_theloai.js"></script>
 <script>
     $(document).ready(function () { /* sau khi html load và sẵn sàng*/
         $('#icon-menu').click(function () { /*thực hiện hàm click*/
@@ -177,15 +171,15 @@
     function AddTimes() {
         var timems;
         setTimeout(() => {
-            for (let i = 0; i < listmusic.length; i++) {
-                document.getElementsByClassName('time-item-trans')[i].innerText = listTime[i];
-            }
-            for (let i = 0; i < listmusic.length; i++) {
-                var text = document.getElementsByClassName('time-item-trans')[i].innerText;
-                if (text == 'undefined') {
-                    document.getElementsByClassName('time-item-trans')[i].innerHTML = '3:40';
-                }
-            }
+            // for (let i = 0; i < listmusic.length; i++) {
+            //     document.getElementsByClassName('time-item-trans')[i].innerText = listTime[i];
+            // }
+            // for (let i = 0; i < listmusic.length; i++) {
+            //     var text = document.getElementsByClassName('time-item-trans')[i].innerText;
+            //     if (text == 'undefined') {
+            //         document.getElementsByClassName('time-item-trans')[i].innerHTML = '3:40';
+            //     }
+            // }
             timems = setInterval(() => {
                 for (let i = 0; i < listmusic.length; i++) {
                     if (listTime[i] == undefined) {
@@ -197,7 +191,7 @@
         }, 1000);
         setTimeout(() => {
             clearInterval(timems);
-        }, 3000);
+        }, 20000);
     }
 
     setTimeout(() => {

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="CSS/index.css">
     <title>Cinema</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"  />
+    <link rel="icon" href="IMAGE/TrangChu/img-login/logo.png">
 </head>
 
 <body>
@@ -21,7 +22,7 @@
                         <img src="IMAGE/TrangChu/img-login/logo.png" alt="">
                     </div>
                     <div class="logo">
-                        <div class="button"><button type="button">Đăng kí</button></div>
+                        <div class="button"><button type="button" id="sign-up">Đăng kí</button></div>
                     </div>
                 </div>
                 <!-- Thông tin phim sắp chiếu -->
@@ -54,5 +55,8 @@
 <script>
     document.getElementById('chuyentoicode').addEventListener('click', function(){
         location = 'trangchu.html';
+    })
+    document.getElementById('sign-up').addEventListener('click', function(){
+        location = 'dangki.html';
     })
 </script>
